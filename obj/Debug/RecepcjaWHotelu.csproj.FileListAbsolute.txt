@@ -1,0 +1,9 @@
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\RecepcjaWHotelu.exe.config
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\RecepcjaWHotelu.exe
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\RecepcjaWHotelu.pdb
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.csprojAssemblyReference.cache
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Properties.Resources.resources
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.csproj.GenerateResource.cache
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.csproj.CoreCompileInputs.cache
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.exe
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.pdb
