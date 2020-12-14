@@ -1,2 +1,1 @@
 # RecepcjaWHotelu
-# RecepcjaWHotlu
