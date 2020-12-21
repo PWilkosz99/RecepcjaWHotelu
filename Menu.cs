@@ -17,6 +17,17 @@ namespace RecepcjaWHotelu
             InitializeComponent();
         }
 
+        private void btn_rezerwuj_Click(object sender, EventArgs e)
+        {
+            if (!MW.Instance.PnlContainter.Controls.ContainsKey("Rezerwuj"))
+            {
+                Rezerwuj rezerwuj = new Rezerwuj();
+                rezerwuj.Dock = DockStyle.Fill;
+                MW.Instance.PnlContainter.Controls.Add(rezerwuj);
+            }
+            MW.Instance.PnlContainter.Controls["Rezerwuj"].BringToFront();
+        }
+
         private void btn_zakwateruj_Click(object sender, EventArgs e)
         {
             if (!MW.Instance.PnlContainter.Controls.ContainsKey("Zakwateruj"))
@@ -30,7 +41,13 @@ namespace RecepcjaWHotelu
 
         private void btn_wykwateruj_Click(object sender, EventArgs e)
         {
-
+            if (!MW.Instance.PnlContainter.Controls.ContainsKey("Wykwateruj"))
+            {
+                Wykwateruj wykwateruj = new Wykwateruj();
+                wykwateruj.Dock = DockStyle.Fill;
+                MW.Instance.PnlContainter.Controls.Add(wykwateruj);
+            }
+            MW.Instance.PnlContainter.Controls["Wykwateruj"].BringToFront();
         }
     }
 }

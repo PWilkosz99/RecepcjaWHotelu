@@ -34,6 +34,7 @@ namespace RecepcjaWHotelu
             this.btn_check = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label_conn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ULogin
@@ -53,7 +54,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_check
             // 
-            this.btn_check.Location = new System.Drawing.Point(303, 192);
+            this.btn_check.Location = new System.Drawing.Point(304, 187);
             this.btn_check.Name = "btn_check";
             this.btn_check.Size = new System.Drawing.Size(160, 48);
             this.btn_check.TabIndex = 2;
@@ -79,10 +80,22 @@ namespace RecepcjaWHotelu
             this.label2.TabIndex = 4;
             this.label2.Text = "Hasło:";
             // 
+            // label_conn
+            // 
+            this.label_conn.AutoSize = true;
+            this.label_conn.ForeColor = System.Drawing.Color.OliveDrab;
+            this.label_conn.Location = new System.Drawing.Point(276, 160);
+            this.label_conn.Name = "label_conn";
+            this.label_conn.Size = new System.Drawing.Size(212, 13);
+            this.label_conn.TabIndex = 5;
+            this.label_conn.Text = "Nawiązywanie połączenia z bazą danych...";
+            this.label_conn.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label_conn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_check);
@@ -102,5 +115,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.Button btn_check;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_conn;
     }
 }

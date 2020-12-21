@@ -10,7 +10,7 @@ namespace RecepcjaWHotelu
     {
         string Imie;
         string Nazwisko;
-        public void PrzyjmijRezerwacje(Rezerwacja R)
+        public void PrzyjmijRezerwacje()
         {
 
         }

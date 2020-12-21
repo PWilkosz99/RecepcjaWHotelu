@@ -33,11 +33,12 @@ namespace RecepcjaWHotelu
             this.btn_wykwateruj = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btn_rezerwuj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_zakwateruj
             // 
-            this.btn_zakwateruj.Location = new System.Drawing.Point(133, 60);
+            this.btn_zakwateruj.Location = new System.Drawing.Point(157, 134);
             this.btn_zakwateruj.Name = "btn_zakwateruj";
             this.btn_zakwateruj.Size = new System.Drawing.Size(201, 59);
             this.btn_zakwateruj.TabIndex = 0;
@@ -47,7 +48,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_wykwateruj
             // 
-            this.btn_wykwateruj.Location = new System.Drawing.Point(412, 60);
+            this.btn_wykwateruj.Location = new System.Drawing.Point(436, 134);
             this.btn_wykwateruj.Name = "btn_wykwateruj";
             this.btn_wykwateruj.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_wykwateruj.Size = new System.Drawing.Size(201, 59);
@@ -58,7 +59,7 @@ namespace RecepcjaWHotelu
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(412, 150);
+            this.button3.Location = new System.Drawing.Point(436, 224);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(201, 59);
             this.button3.TabIndex = 3;
@@ -67,17 +68,28 @@ namespace RecepcjaWHotelu
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(133, 150);
+            this.button4.Location = new System.Drawing.Point(157, 224);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(201, 59);
             this.button4.TabIndex = 2;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // btn_rezerwuj
+            // 
+            this.btn_rezerwuj.Location = new System.Drawing.Point(157, 69);
+            this.btn_rezerwuj.Name = "btn_rezerwuj";
+            this.btn_rezerwuj.Size = new System.Drawing.Size(480, 48);
+            this.btn_rezerwuj.TabIndex = 4;
+            this.btn_rezerwuj.Text = "Dodaj rezerwację";
+            this.btn_rezerwuj.UseVisualStyleBackColor = true;
+            this.btn_rezerwuj.Click += new System.EventHandler(this.btn_rezerwuj_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_rezerwuj);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_wykwateruj);
@@ -94,5 +106,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.Button btn_wykwateruj;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_rezerwuj;
     }
 }

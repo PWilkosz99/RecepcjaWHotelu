@@ -22,10 +22,11 @@ namespace RecepcjaWHotelu
         {
             string connetionString = null;
             MySqlConnection cnn;
-            connetionString = "***";
+            connetionString = "server=mysql.agh.edu.pl,3306;database=pwilkosz;uid=pwilkosz;pwd=jh1ecYeRaykLtduV;";
             cnn = new MySqlConnection(connetionString);
             try
             {
+                label_conn.Visible = true;
                 cnn.Open();
                 Console.WriteLine("Connection Open !");
                 MySqlCommand query = new MySqlCommand($"SELECT password FROM users where login = '{ULogin.Text}';", cnn);
@@ -35,7 +36,8 @@ namespace RecepcjaWHotelu
                 {
                     string psw = queryResult.GetString(0);
                     cnn.Close();
-                    if(UPassword.Text == psw)
+                    label_conn.Visible = false;
+                    if (UPassword.Text == psw)
                     {
                         if (!MW.Instance.PnlContainter.Controls.ContainsKey("Menu"))
                         {
@@ -52,15 +54,17 @@ namespace RecepcjaWHotelu
                 }
                 else
                 {
+
                     MessageBox.Show("Wprowadzono błędne dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Błąd połączenia z bazą danych\n{ex.ToString()}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Błąd połączenia z bazą danych\n\n{ex.ToString()}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
+                label_conn.Visible = false;
                 cnn.Close();
             }
         }
