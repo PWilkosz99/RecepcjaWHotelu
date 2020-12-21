@@ -13,6 +13,7 @@ namespace RecepcjaWHotelu
     public partial class MW : Form
     {
         static MW _obj;
+        static string curclient;
 
         public static MW Instance
         {
@@ -24,6 +25,12 @@ namespace RecepcjaWHotelu
                 }
                 return _obj;
             }
+        }
+
+        public static string CurrentC
+        {
+            get { return curclient; }
+            set { curclient = value; }
         }
 
         public Panel PnlContainter

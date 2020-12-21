@@ -21,10 +21,10 @@ namespace RecepcjaWHotelu
 
         private void btn_check_Click(object sender, EventArgs e)
         {
-            string connetionString = null;
+
             MySqlConnection cnn;
             StreamReader sr = File.OpenText(@"..\..\passwd.txt");
-            connetionString = sr.ReadLine();
+            string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);
             try

@@ -22,7 +22,7 @@ namespace RecepcjaWHotelu
 
         public string imie;
         public string nazwisko;
-        public int nrtelefonu;
+        public long nrtelefonu;
         public void Rezerwuj()
         {
             MySqlConnection cnn;
@@ -30,10 +30,11 @@ namespace RecepcjaWHotelu
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);
+
             try
             {
                 cnn.Open();
-                Console.WriteLine("Connection Open !");
+                Console.WriteLine("Connection Open R1!");
                 MySqlCommand query = new MySqlCommand($"INSERT INTO `rezerwacja` (`id`, `dataod`, `datado`, `iloscosob`, `czyparking`, `czyjedzenie`, `czyspa`, `czysilownia`, `imie`, `nazwisko`, `nrtelefonu`) VALUES ('{nrezerwacji}', '{dataod}', '{datado}', '{ilosob}', '{Convert.ToInt32(czyparking)}', '{Convert.ToInt32(czyrestauracja)}', '{Convert.ToInt32(czyspa)}', '{Convert.ToInt32(czysilownia)}', '', '', '');", cnn);
                 query.ExecuteNonQuery();
             }
@@ -57,9 +58,10 @@ namespace RecepcjaWHotelu
             try
             {
                 cnn.Open();
-                Console.WriteLine("Connection Open !");
-                MySqlCommand query = new MySqlCommand($"INSERT INTO `rezerwacja` (`id`, `dataod`, `datado`, `iloscosob`, `czyparking`, `czyjedzenie`, `czyspa`, `czysilownia`, `imie`, `nazwisko`, `nrtelefonu`) VALUES ('{nrezerwacji}', '{dataod}', '{datado}', '{ilosob}', '{czyparking}', '{czyrestauracja}', '{czyspa}', '{czysilownia}', '', '', '');", cnn);
+                Console.WriteLine("Connection Open R2!");
+                MySqlCommand query = new MySqlCommand($"UPDATE `rezerwacja` SET `imie`='{imie}',`nazwisko`='{nazwisko}',`nrtelefonu`='{nrtelefonu}' WHERE `id`={MW.CurrentC} ;", cnn);
                 query.ExecuteNonQuery();
+                MW.CurrentC = "";
             }
             catch (Exception ex)
             {

@@ -96,6 +96,7 @@ namespace RecepcjaWHotelu
             this.txt_numer.Name = "txt_numer";
             this.txt_numer.Size = new System.Drawing.Size(244, 20);
             this.txt_numer.TabIndex = 14;
+            this.txt_numer.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // Rezerwuj2
             // 

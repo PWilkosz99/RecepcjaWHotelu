@@ -25,14 +25,14 @@ namespace RecepcjaWHotelu
             if (!(txt_nrrez.Text == ""))
                 rezerwacja.nrezerwacji = Int64.Parse(txt_nrrez.Text);
             rezerwacja.dataod = date_od.Value.ToShortDateString();
-            rezerwacja.datado = date_od.Value.ToShortDateString();
+            rezerwacja.datado = date_do.Value.ToShortDateString();
             if (!(cmb_osob.Text == ""))
                 rezerwacja.ilosob = Int32.Parse(cmb_osob.Text);
             rezerwacja.czyparking = chk_parking.Checked;
             rezerwacja.czyrestauracja = chk_jedzenie.Checked;
             rezerwacja.czysilownia = chk_silownia.Checked;
             rezerwacja.czyspa = chk_spa.Checked;
-
+            MW.CurrentC = txt_nrrez.Text;
             rezerwacja.Rezerwuj();
                 
                 if (!MW.Instance.PnlContainter.Controls.ContainsKey("Rezerwuj2"))
