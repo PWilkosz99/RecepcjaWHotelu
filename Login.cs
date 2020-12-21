@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,9 @@ namespace RecepcjaWHotelu
         {
             string connetionString = null;
             MySqlConnection cnn;
-            connetionString = "server=mysql.agh.edu.pl,3306;database=pwilkosz;uid=pwilkosz;pwd=jh1ecYeRaykLtduV;";
+            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            connetionString = sr.ReadLine();
+            sr.Close();
             cnn = new MySqlConnection(connetionString);
             try
             {
