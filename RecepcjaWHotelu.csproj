@@ -136,6 +136,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rachunek.cs" />
     <Compile Include="Recepcjonista.cs" />
+    <Compile Include="Rezerwacja.cs" />
     <Compile Include="Rezerwuj.cs">
       <SubType>UserControl</SubType>
     </Compile>

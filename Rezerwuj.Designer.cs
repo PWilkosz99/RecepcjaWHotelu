@@ -29,49 +29,61 @@ namespace RecepcjaWHotelu
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt_nrrez = new System.Windows.Forms.TextBox();
+            this.date_od = new System.Windows.Forms.DateTimePicker();
+            this.date_do = new System.Windows.Forms.DateTimePicker();
+            this.cmb_osob = new System.Windows.Forms.ComboBox();
             this.btn_confirm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.chk_parking = new System.Windows.Forms.CheckBox();
+            this.chk_spa = new System.Windows.Forms.CheckBox();
+            this.chk_jedzenie = new System.Windows.Forms.CheckBox();
+            this.chk_silownia = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_nrrez
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 56);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 20);
-            this.textBox1.TabIndex = 0;
+            this.txt_nrrez.Location = new System.Drawing.Point(150, 56);
+            this.txt_nrrez.MaxLength = 30;
+            this.txt_nrrez.Name = "txt_nrrez";
+            this.txt_nrrez.Size = new System.Drawing.Size(247, 20);
+            this.txt_nrrez.TabIndex = 0;
+            this.txt_nrrez.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nrrez_KeyPress);
             // 
-            // dateTimePicker1
+            // date_od
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(145, 121);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(246, 20);
-            this.dateTimePicker1.TabIndex = 1;
+            this.date_od.Location = new System.Drawing.Point(145, 121);
+            this.date_od.Name = "date_od";
+            this.date_od.Size = new System.Drawing.Size(246, 20);
+            this.date_od.TabIndex = 1;
+            this.date_od.Value = new System.DateTime(2020, 12, 21, 0, 0, 0, 0);
             // 
-            // dateTimePicker2
+            // date_do
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(147, 174);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(249, 20);
-            this.dateTimePicker2.TabIndex = 2;
+            this.date_do.Location = new System.Drawing.Point(145, 174);
+            this.date_do.Name = "date_do";
+            this.date_do.Size = new System.Drawing.Size(246, 20);
+            this.date_do.TabIndex = 2;
+            this.date_do.Value = new System.DateTime(2020, 12, 21, 0, 0, 0, 0);
             // 
-            // comboBox1
+            // cmb_osob
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(204, 232);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 3;
+            this.cmb_osob.FormattingEnabled = true;
+            this.cmb_osob.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.cmb_osob.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"});
+            this.cmb_osob.Location = new System.Drawing.Point(204, 232);
+            this.cmb_osob.Name = "cmb_osob";
+            this.cmb_osob.Size = new System.Drawing.Size(121, 21);
+            this.cmb_osob.TabIndex = 3;
             // 
             // btn_confirm
             // 
@@ -119,63 +131,63 @@ namespace RecepcjaWHotelu
             this.label4.TabIndex = 8;
             this.label4.Text = "Ilość osób";
             // 
-            // checkBox1
+            // chk_parking
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(145, 272);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(120, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Miejsce parkingowe";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chk_parking.AutoSize = true;
+            this.chk_parking.Location = new System.Drawing.Point(145, 272);
+            this.chk_parking.Name = "chk_parking";
+            this.chk_parking.Size = new System.Drawing.Size(120, 17);
+            this.chk_parking.TabIndex = 9;
+            this.chk_parking.Text = "Miejsce parkingowe";
+            this.chk_parking.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chk_spa
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(316, 272);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(88, 17);
-            this.checkBox2.TabIndex = 10;
-            this.checkBox2.Text = "Pobyt w SPA";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chk_spa.AutoSize = true;
+            this.chk_spa.Location = new System.Drawing.Point(316, 272);
+            this.chk_spa.Name = "chk_spa";
+            this.chk_spa.Size = new System.Drawing.Size(88, 17);
+            this.chk_spa.TabIndex = 10;
+            this.chk_spa.Text = "Pobyt w SPA";
+            this.chk_spa.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chk_jedzenie
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(145, 309);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(58, 17);
-            this.checkBox3.TabIndex = 11;
-            this.checkBox3.Text = "Posiłki";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chk_jedzenie.AutoSize = true;
+            this.chk_jedzenie.Location = new System.Drawing.Point(145, 309);
+            this.chk_jedzenie.Name = "chk_jedzenie";
+            this.chk_jedzenie.Size = new System.Drawing.Size(58, 17);
+            this.chk_jedzenie.TabIndex = 11;
+            this.chk_jedzenie.Text = "Posiłki";
+            this.chk_jedzenie.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chk_silownia
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(316, 309);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(114, 17);
-            this.checkBox4.TabIndex = 12;
-            this.checkBox4.Text = "Wstęp na siłownie";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chk_silownia.AutoSize = true;
+            this.chk_silownia.Location = new System.Drawing.Point(316, 309);
+            this.chk_silownia.Name = "chk_silownia";
+            this.chk_silownia.Size = new System.Drawing.Size(114, 17);
+            this.chk_silownia.TabIndex = 12;
+            this.chk_silownia.Text = "Wstęp na siłownie";
+            this.chk_silownia.UseVisualStyleBackColor = true;
             // 
             // Rezerwuj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.checkBox4);
-            this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.chk_silownia);
+            this.Controls.Add(this.chk_jedzenie);
+            this.Controls.Add(this.chk_spa);
+            this.Controls.Add(this.chk_parking);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_confirm);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmb_osob);
+            this.Controls.Add(this.date_do);
+            this.Controls.Add(this.date_od);
+            this.Controls.Add(this.txt_nrrez);
             this.Name = "Rezerwuj";
             this.Size = new System.Drawing.Size(632, 494);
             this.ResumeLayout(false);
@@ -184,19 +196,18 @@ namespace RecepcjaWHotelu
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker date_od;
+        private System.Windows.Forms.DateTimePicker date_do;
+        private System.Windows.Forms.ComboBox cmb_osob;
         private System.Windows.Forms.Button btn_confirm;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox chk_parking;
+        private System.Windows.Forms.CheckBox chk_spa;
+        private System.Windows.Forms.CheckBox chk_jedzenie;
+        private System.Windows.Forms.CheckBox chk_silownia;
+        private System.Windows.Forms.TextBox txt_nrrez;
     }
 }

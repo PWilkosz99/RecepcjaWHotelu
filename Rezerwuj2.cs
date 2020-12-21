@@ -19,6 +19,7 @@ namespace RecepcjaWHotelu
 
         private void btn_potwierdz_Click(object sender, EventArgs e)
         {
+            
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
         }
     }
