@@ -40,3 +40,5 @@ E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Platnosc.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Wykwateruj.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Rezerwuj.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Rezerwuj2.resources
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Wyswietl.resources
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Wyklucz.resources

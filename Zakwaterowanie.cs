@@ -45,10 +45,22 @@ namespace RecepcjaWHotelu
                         }
                         else
                         {
-                            MySqlCommand query2 = new MySqlCommand($"INSERT INTO `zakwaterowanie`(`nrezerwacji`, `npokoju`) VALUES ({nr_rezerwacji},{nr_pokoju});", cnn);
-                            query2.ExecuteNonQuery();
-                            cnn.Close();
-                            return true;
+                            MySqlCommand qa = new MySqlCommand($"SELECT `id` FROM `wykluczone` WHERE `id` = '{nr_pokoju}'; ", cnn);
+                            MySqlDataReader qar = qa.ExecuteReader();
+                            bool avl = qar.Read();
+                            qar.Close();
+                            if (avl)
+                            {
+                                MessageBox.Show($"Pokój o podanym numerze jest wykluczony z użytku", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                return false;
+                            }
+                            else
+                            {
+                                MySqlCommand query2 = new MySqlCommand($"INSERT INTO `zakwaterowanie`(`nrezerwacji`, `npokoju`) VALUES ({nr_rezerwacji},{nr_pokoju});", cnn);
+                                query2.ExecuteNonQuery();
+                                cnn.Close();
+                                return true;
+                            }
                         }
                     }
                     cnn.Close();

@@ -49,5 +49,27 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Wykwateruj"].BringToFront();
         }
+
+        private void btn_wyswietl_Click(object sender, EventArgs e)
+        {
+            if (!MW.Instance.PnlContainter.Controls.ContainsKey("Wyswietl"))
+            {
+                Wyswietl wyswietlanie = new Wyswietl();
+                wyswietlanie.Dock = DockStyle.Fill;
+                MW.Instance.PnlContainter.Controls.Add(wyswietlanie);
+            }
+            MW.Instance.PnlContainter.Controls["Wyswietl"].BringToFront();
+        }
+
+        private void btn_wyklucz_Click(object sender, EventArgs e)
+        {
+            if (!MW.Instance.PnlContainter.Controls.ContainsKey("Wyklucz"))
+            {
+                Wyklucz wyklucz = new Wyklucz();
+                wyklucz.Dock = DockStyle.Fill;
+                MW.Instance.PnlContainter.Controls.Add(wyklucz);
+            }
+            MW.Instance.PnlContainter.Controls["Wyklucz"].BringToFront();
+        }
     }
 }

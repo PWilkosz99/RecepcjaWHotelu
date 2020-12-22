@@ -125,7 +125,6 @@
     <Compile Include="MW.Designer.cs">
       <DependentUpon>MW.cs</DependentUpon>
     </Compile>
-    <Compile Include="Klient.cs" />
     <Compile Include="Platnosc.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,12 +148,24 @@
     <Compile Include="Rezerwuj2.Designer.cs">
       <DependentUpon>Rezerwuj2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wyklucz.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wyklucz.Designer.cs">
+      <DependentUpon>Wyklucz.cs</DependentUpon>
+    </Compile>
     <Compile Include="Wykwaterowanie.cs" />
     <Compile Include="Wykwateruj.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Wykwateruj.Designer.cs">
       <DependentUpon>Wykwateruj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Wyswietl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Wyswietl.Designer.cs">
+      <DependentUpon>Wyswietl.cs</DependentUpon>
     </Compile>
     <Compile Include="Zakwaterowanie.cs" />
     <Compile Include="Zakwateruj.cs">
@@ -190,8 +201,14 @@
     <EmbeddedResource Include="Rezerwuj2.resx">
       <DependentUpon>Rezerwuj2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Wyklucz.resx">
+      <DependentUpon>Wyklucz.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Wykwateruj.resx">
       <DependentUpon>Wykwateruj.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Wyswietl.resx">
+      <DependentUpon>Wyswietl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Zakwateruj.resx">
       <DependentUpon>Zakwateruj.cs</DependentUpon>

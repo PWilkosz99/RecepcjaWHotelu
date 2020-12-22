@@ -31,8 +31,8 @@ namespace RecepcjaWHotelu
         {
             this.btn_zakwateruj = new System.Windows.Forms.Button();
             this.btn_wykwateruj = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btn_wyklucz = new System.Windows.Forms.Button();
+            this.btn_wyswietl = new System.Windows.Forms.Button();
             this.btn_rezerwuj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -57,23 +57,25 @@ namespace RecepcjaWHotelu
             this.btn_wykwateruj.UseVisualStyleBackColor = true;
             this.btn_wykwateruj.Click += new System.EventHandler(this.btn_wykwateruj_Click);
             // 
-            // button3
+            // btn_wyklucz
             // 
-            this.button3.Location = new System.Drawing.Point(436, 224);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(201, 59);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_wyklucz.Location = new System.Drawing.Point(436, 224);
+            this.btn_wyklucz.Name = "btn_wyklucz";
+            this.btn_wyklucz.Size = new System.Drawing.Size(201, 59);
+            this.btn_wyklucz.TabIndex = 3;
+            this.btn_wyklucz.Text = "Edytuj wykluczenia";
+            this.btn_wyklucz.UseVisualStyleBackColor = true;
+            this.btn_wyklucz.Click += new System.EventHandler(this.btn_wyklucz_Click);
             // 
-            // button4
+            // btn_wyswietl
             // 
-            this.button4.Location = new System.Drawing.Point(157, 224);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(201, 59);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_wyswietl.Location = new System.Drawing.Point(157, 224);
+            this.btn_wyswietl.Name = "btn_wyswietl";
+            this.btn_wyswietl.Size = new System.Drawing.Size(201, 59);
+            this.btn_wyswietl.TabIndex = 2;
+            this.btn_wyswietl.Text = "Wyświetl aktywne zakwaterowania";
+            this.btn_wyswietl.UseVisualStyleBackColor = true;
+            this.btn_wyswietl.Click += new System.EventHandler(this.btn_wyswietl_Click);
             // 
             // btn_rezerwuj
             // 
@@ -90,8 +92,8 @@ namespace RecepcjaWHotelu
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btn_rezerwuj);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btn_wyklucz);
+            this.Controls.Add(this.btn_wyswietl);
             this.Controls.Add(this.btn_wykwateruj);
             this.Controls.Add(this.btn_zakwateruj);
             this.Name = "Menu";
@@ -104,8 +106,8 @@ namespace RecepcjaWHotelu
 
         private System.Windows.Forms.Button btn_zakwateruj;
         private System.Windows.Forms.Button btn_wykwateruj;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btn_wyklucz;
+        private System.Windows.Forms.Button btn_wyswietl;
         private System.Windows.Forms.Button btn_rezerwuj;
     }
 }
