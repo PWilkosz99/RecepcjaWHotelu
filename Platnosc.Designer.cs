@@ -30,7 +30,7 @@ namespace RecepcjaWHotelu
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_kwota = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.rd_gotowka = new System.Windows.Forms.RadioButton();
             this.rd_karta = new System.Windows.Forms.RadioButton();
@@ -46,12 +46,12 @@ namespace RecepcjaWHotelu
             this.label1.TabIndex = 0;
             this.label1.Text = "Wartość rachunku";
             // 
-            // textBox1
+            // txt_kwota
             // 
-            this.textBox1.Location = new System.Drawing.Point(200, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 1;
+            this.txt_kwota.Location = new System.Drawing.Point(200, 93);
+            this.txt_kwota.Name = "txt_kwota";
+            this.txt_kwota.Size = new System.Drawing.Size(160, 20);
+            this.txt_kwota.TabIndex = 1;
             // 
             // label2
             // 
@@ -92,6 +92,7 @@ namespace RecepcjaWHotelu
             this.btn_confirm.TabIndex = 5;
             this.btn_confirm.Text = "Potwierdź";
             this.btn_confirm.UseVisualStyleBackColor = true;
+            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
             // 
             // Platnosc
             // 
@@ -101,7 +102,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.rd_karta);
             this.Controls.Add(this.rd_gotowka);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_kwota);
             this.Controls.Add(this.label1);
             this.Name = "Platnosc";
             this.Size = new System.Drawing.Size(670, 347);
@@ -113,7 +114,7 @@ namespace RecepcjaWHotelu
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_kwota;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rd_gotowka;
         private System.Windows.Forms.RadioButton rd_karta;

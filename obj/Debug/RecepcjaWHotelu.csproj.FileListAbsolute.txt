@@ -36,7 +36,6 @@ E:\GIT REPO\RecepcjaWHotelu\bin\Debug\System.Memory.xml
 E:\GIT REPO\RecepcjaWHotelu\bin\Debug\System.Numerics.Vectors.xml
 E:\GIT REPO\RecepcjaWHotelu\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.csproj.CopyComplete
-E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Zakwateruj2.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Platnosc.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Wykwateruj.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Rezerwuj.resources

@@ -1,25 +1,46 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RecepcjaWHotelu
 {
     class Rachunek
     {
-        protected int RachunekID;
-        int Wielkosc;
-        //Date TerminUregulowania;
-        bool CzyUregulowano;
-        //Zakwaterowanie ZaZakwaterowanie;
-        public void Zaksieguj()
+        public string rezid;
+        public int wielkosc;
+        public bool czyuregulowano;
+        public char metoda;
+        public bool Ureguluj()
         {
+            MySqlConnection cnn;
+            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            string connetionString = sr.ReadLine();
+            sr.Close();
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+                Console.WriteLine("Connection Open R1!");
+                MySqlCommand query = new MySqlCommand($"INSERT INTO `Rachunek` (`id`, `wielkosc`, `czyuregulowano`, `metoda`) VALUES ('{rezid}', '{wielkosc}', '1', '{metoda}');", cnn);
+                query.ExecuteNonQuery();
+                cnn.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd połączenia z bazą danych\n\n{ex.ToString()}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
 
-        }
-        public void CzyUregulowany()
-        {
-
+                cnn.Close();
+            }
+            return false;
         }
     }
 }

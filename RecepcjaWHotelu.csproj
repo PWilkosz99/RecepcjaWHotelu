@@ -155,17 +155,12 @@
     <Compile Include="Wykwateruj.Designer.cs">
       <DependentUpon>Wykwateruj.cs</DependentUpon>
     </Compile>
+    <Compile Include="Zakwaterowanie.cs" />
     <Compile Include="Zakwateruj.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Zakwateruj.Designer.cs">
       <DependentUpon>Zakwateruj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Zakwateruj2.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Zakwateruj2.Designer.cs">
-      <DependentUpon>Zakwateruj2.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -199,9 +194,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Zakwateruj.resx">
       <DependentUpon>Zakwateruj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Zakwateruj2.resx">
-      <DependentUpon>Zakwateruj2.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

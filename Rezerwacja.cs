@@ -37,6 +37,7 @@ namespace RecepcjaWHotelu
                 Console.WriteLine("Connection Open R1!");
                 MySqlCommand query = new MySqlCommand($"INSERT INTO `rezerwacja` (`id`, `dataod`, `datado`, `iloscosob`, `czyparking`, `czyjedzenie`, `czyspa`, `czysilownia`, `imie`, `nazwisko`, `nrtelefonu`) VALUES ('{nrezerwacji}', '{dataod}', '{datado}', '{ilosob}', '{Convert.ToInt32(czyparking)}', '{Convert.ToInt32(czyrestauracja)}', '{Convert.ToInt32(czyspa)}', '{Convert.ToInt32(czysilownia)}', '', '', '');", cnn);
                 query.ExecuteNonQuery();
+                cnn.Close();
             }
             catch (Exception ex)
             {
@@ -62,6 +63,7 @@ namespace RecepcjaWHotelu
                 MySqlCommand query = new MySqlCommand($"UPDATE `rezerwacja` SET `imie`='{imie}',`nazwisko`='{nazwisko}',`nrtelefonu`='{nrtelefonu}' WHERE `id`={MW.CurrentC} ;", cnn);
                 query.ExecuteNonQuery();
                 MW.CurrentC = "";
+                cnn.Close();
             }
             catch (Exception ex)
             {
