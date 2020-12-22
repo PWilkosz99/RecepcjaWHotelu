@@ -38,24 +38,26 @@ namespace RecepcjaWHotelu
             // 
             // txt_nrrezerwacji
             // 
-            this.txt_nrrezerwacji.Location = new System.Drawing.Point(140, 170);
+            this.txt_nrrezerwacji.Location = new System.Drawing.Point(140, 110);
             this.txt_nrrezerwacji.Name = "txt_nrrezerwacji";
             this.txt_nrrezerwacji.Size = new System.Drawing.Size(276, 20);
             this.txt_nrrezerwacji.TabIndex = 1;
+            this.txt_nrrezerwacji.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nrrezerwacji_KeyPress);
             // 
             // btn_confirm
             // 
-            this.btn_confirm.Location = new System.Drawing.Point(209, 232);
+            this.btn_confirm.Location = new System.Drawing.Point(214, 280);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(141, 46);
             this.btn_confirm.TabIndex = 2;
             this.btn_confirm.Text = "Potwierdź";
             this.btn_confirm.UseVisualStyleBackColor = true;
+            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 154);
+            this.label1.Location = new System.Drawing.Point(169, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 3;
@@ -64,7 +66,7 @@ namespace RecepcjaWHotelu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 82);
+            this.label2.Location = new System.Drawing.Point(169, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 4;
@@ -74,6 +76,7 @@ namespace RecepcjaWHotelu
             // 
             this.cmb_numerpokoju.FormattingEnabled = true;
             this.cmb_numerpokoju.Items.AddRange(new object[] {
+            "",
             "1",
             "2",
             "3",
@@ -83,7 +86,7 @@ namespace RecepcjaWHotelu
             "7",
             "8",
             "9"});
-            this.cmb_numerpokoju.Location = new System.Drawing.Point(140, 98);
+            this.cmb_numerpokoju.Location = new System.Drawing.Point(140, 190);
             this.cmb_numerpokoju.Name = "cmb_numerpokoju";
             this.cmb_numerpokoju.Size = new System.Drawing.Size(276, 21);
             this.cmb_numerpokoju.TabIndex = 5;

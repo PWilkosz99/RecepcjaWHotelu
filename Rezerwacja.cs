@@ -23,7 +23,7 @@ namespace RecepcjaWHotelu
         public string imie;
         public string nazwisko;
         public long nrtelefonu;
-        public void Rezerwuj()
+        public bool Rezerwuj()
         {
             MySqlConnection cnn;
             StreamReader sr = File.OpenText(@"..\..\passwd.txt");
@@ -35,9 +35,23 @@ namespace RecepcjaWHotelu
             {
                 cnn.Open();
                 Console.WriteLine("Connection Open R1!");
-                MySqlCommand query = new MySqlCommand($"INSERT INTO `rezerwacja` (`id`, `dataod`, `datado`, `iloscosob`, `czyparking`, `czyjedzenie`, `czyspa`, `czysilownia`, `imie`, `nazwisko`, `nrtelefonu`) VALUES ('{nrezerwacji}', '{dataod}', '{datado}', '{ilosob}', '{Convert.ToInt32(czyparking)}', '{Convert.ToInt32(czyrestauracja)}', '{Convert.ToInt32(czyspa)}', '{Convert.ToInt32(czysilownia)}', '', '', '');", cnn);
-                query.ExecuteNonQuery();
-                cnn.Close();
+                MySqlCommand query = new MySqlCommand($"SELECT `id` FROM `rezerwacja` where `id`='{nrezerwacji}';", cnn);
+                MySqlDataReader queryResult = query.ExecuteReader();
+                bool x = queryResult.Read();
+                queryResult.Close();
+                if (x)
+                {
+                    MessageBox.Show($"Rezerwacja o takim numerze znajduje się już w systemie", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cnn.Close();
+                    return true;
+                }
+                else
+                {
+                    MySqlCommand query2 = new MySqlCommand($"INSERT INTO `rezerwacja` (`id`, `dataod`, `datado`, `iloscosob`, `czyparking`, `czyjedzenie`, `czyspa`, `czysilownia`, `imie`, `nazwisko`, `nrtelefonu`) VALUES ('{nrezerwacji}', '{dataod}', '{datado}', '{ilosob}', '{Convert.ToInt32(czyparking)}', '{Convert.ToInt32(czyrestauracja)}', '{Convert.ToInt32(czyspa)}', '{Convert.ToInt32(czysilownia)}', '', '', '');", cnn);
+                    query2.ExecuteNonQuery();
+                    cnn.Close();
+                    return false;
+                }
             }
             catch (Exception ex)
             {
@@ -48,6 +62,7 @@ namespace RecepcjaWHotelu
 
                 cnn.Close();
             }
+            return false;
         }
         public void Rezerwuj2()
         {

@@ -26,7 +26,7 @@ namespace RecepcjaWHotelu
             {
                 cnn.Open();
                 Console.WriteLine("Connection Open R1!");
-                MySqlCommand query = new MySqlCommand($"INSERT INTO `Rachunek` (`id`, `wielkosc`, `czyuregulowano`, `metoda`) VALUES ('{rezid}', '{wielkosc}', '1', '{metoda}');", cnn);
+                MySqlCommand query = new MySqlCommand($"INSERT INTO `rachunek` (`id`, `wielkosc`, `czyuregulowano`, `metoda`) VALUES ('{rezid}', '{wielkosc}', '1', '{metoda}');", cnn);
                 query.ExecuteNonQuery();
                 cnn.Close();
                 return true;

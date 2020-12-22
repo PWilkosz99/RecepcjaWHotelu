@@ -33,8 +33,8 @@ namespace RecepcjaWHotelu
             rezerwacja.czysilownia = chk_silownia.Checked;
             rezerwacja.czyspa = chk_spa.Checked;
             MW.CurrentC = txt_nrrez.Text;
-            rezerwacja.Rezerwuj();
-                
+            if (!rezerwacja.Rezerwuj())
+            {
                 if (!MW.Instance.PnlContainter.Controls.ContainsKey("Rezerwuj2"))
                 {
                     Rezerwuj2 rezerwuj2 = new Rezerwuj2();
@@ -42,7 +42,7 @@ namespace RecepcjaWHotelu
                     MW.Instance.PnlContainter.Controls.Add(rezerwuj2);
                 }
                 MW.Instance.PnlContainter.Controls["Rezerwuj2"].BringToFront();
-            
+            }    
         }
 
         private void txt_nrrez_KeyPress(object sender, KeyPressEventArgs e)

@@ -20,9 +20,6 @@ namespace RecepcjaWHotelu
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);
-
-
-
             try
             {
                 cnn.Open();
@@ -30,24 +27,37 @@ namespace RecepcjaWHotelu
                 MySqlCommand query = new MySqlCommand($"SELECT `id` FROM `rezerwacja` WHERE `id`={nr_rezerwacji}", cnn);
                 MySqlDataReader queryResult = query.ExecuteReader();
                 bool x = queryResult.Read();
-                Console.WriteLine();
                 if (x)
                 {
                     long dbc = Int64.Parse(queryResult.GetString(0));
-                    cnn.Close();
+                    queryResult.Close(); ;
                     if (nr_rezerwacji == dbc)
                     {
-                        cnn.Open();
-                        MySqlCommand query2 = new MySqlCommand($"INSERT INTO `zakwaterowanie`(`nrezerwacji`, `npokoju`) VALUES ({nr_rezerwacji},{nr_pokoju});", cnn);
-                        query2.ExecuteNonQuery();
-                        cnn.Close();
-                        return true;
+                        MySqlCommand query3 = new MySqlCommand($"SELECT `nrezerwacji` FROM `zakwaterowanie` where `nrezerwacji`='{nr_rezerwacji}';", cnn);
+                        MySqlDataReader query3Result = query3.ExecuteReader();
+                        bool z = query3Result.Read();
+                        query3Result.Close();
+                        if (z)
+                        {
+                            MessageBox.Show($"Klient o takim numerze rezerwacji zostal juz zakwaterowany", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            cnn.Close();
+                            return false;
+                        }
+                        else
+                        {
+                            MySqlCommand query2 = new MySqlCommand($"INSERT INTO `zakwaterowanie`(`nrezerwacji`, `npokoju`) VALUES ({nr_rezerwacji},{nr_pokoju});", cnn);
+                            query2.ExecuteNonQuery();
+                            cnn.Close();
+                            return true;
+                        }
                     }
+                    cnn.Close();
                     return false;
                 }
                 else
                 {
-                     MessageBox.Show($"Brak rezerwacji o podanym numerze", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Brak rezerwacji o podanym numerze", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cnn.Close();
                     return false;
                 }
 

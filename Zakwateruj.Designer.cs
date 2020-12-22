@@ -95,6 +95,7 @@ namespace RecepcjaWHotelu
             this.txt_nrrez.Name = "txt_nrrez";
             this.txt_nrrez.Size = new System.Drawing.Size(270, 20);
             this.txt_nrrez.TabIndex = 11;
+            this.txt_nrrez.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nrrez_KeyPress);
             // 
             // label1
             // 
