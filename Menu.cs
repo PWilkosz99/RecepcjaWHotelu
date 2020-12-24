@@ -71,5 +71,16 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Wyklucz"].BringToFront();
         }
+
+        private void btn_zaplanowane_Click(object sender, EventArgs e)
+        {
+            if (!MW.Instance.PnlContainter.Controls.ContainsKey("Zaplanowane"))
+            {
+                Zaplanowane zaplanowane = new Zaplanowane();
+                zaplanowane.Dock = DockStyle.Fill;
+                MW.Instance.PnlContainter.Controls.Add(zaplanowane);
+            }
+            MW.Instance.PnlContainter.Controls["Zaplanowane"].BringToFront();
+        }
     }
 }

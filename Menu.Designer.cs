@@ -34,6 +34,7 @@ namespace RecepcjaWHotelu
             this.btn_wyklucz = new System.Windows.Forms.Button();
             this.btn_wyswietl = new System.Windows.Forms.Button();
             this.btn_rezerwuj = new System.Windows.Forms.Button();
+            this.btn_zaplanowane = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_zakwateruj
@@ -87,10 +88,21 @@ namespace RecepcjaWHotelu
             this.btn_rezerwuj.UseVisualStyleBackColor = true;
             this.btn_rezerwuj.Click += new System.EventHandler(this.btn_rezerwuj_Click);
             // 
+            // btn_zaplanowane
+            // 
+            this.btn_zaplanowane.Location = new System.Drawing.Point(159, 308);
+            this.btn_zaplanowane.Name = "btn_zaplanowane";
+            this.btn_zaplanowane.Size = new System.Drawing.Size(201, 59);
+            this.btn_zaplanowane.TabIndex = 5;
+            this.btn_zaplanowane.Text = "Wyświetl zaplanowane rezerwacje";
+            this.btn_zaplanowane.UseVisualStyleBackColor = true;
+            this.btn_zaplanowane.Click += new System.EventHandler(this.btn_zaplanowane_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_zaplanowane);
             this.Controls.Add(this.btn_rezerwuj);
             this.Controls.Add(this.btn_wyklucz);
             this.Controls.Add(this.btn_wyswietl);
@@ -109,5 +121,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.Button btn_wyklucz;
         private System.Windows.Forms.Button btn_wyswietl;
         private System.Windows.Forms.Button btn_rezerwuj;
+        private System.Windows.Forms.Button btn_zaplanowane;
     }
 }
