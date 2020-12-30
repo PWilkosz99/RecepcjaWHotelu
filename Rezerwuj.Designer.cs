@@ -42,6 +42,7 @@ namespace RecepcjaWHotelu
             this.chk_spa = new System.Windows.Forms.CheckBox();
             this.chk_jedzenie = new System.Windows.Forms.CheckBox();
             this.chk_silownia = new System.Windows.Forms.CheckBox();
+            this.btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_nrrez
@@ -171,10 +172,21 @@ namespace RecepcjaWHotelu
             this.chk_silownia.Text = "Wstęp na siłownie";
             this.chk_silownia.UseVisualStyleBackColor = true;
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(431, 22);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(141, 48);
+            this.btn_back.TabIndex = 13;
+            this.btn_back.Text = "Powrót";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // Rezerwuj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.chk_silownia);
             this.Controls.Add(this.chk_jedzenie);
             this.Controls.Add(this.chk_spa);
@@ -210,5 +222,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.CheckBox chk_jedzenie;
         private System.Windows.Forms.CheckBox chk_silownia;
         private System.Windows.Forms.TextBox txt_nrrez;
+        private System.Windows.Forms.Button btn_back;
     }
 }

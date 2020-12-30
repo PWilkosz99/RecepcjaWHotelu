@@ -74,5 +74,10 @@ namespace RecepcjaWHotelu
             date_od.Value = DateTime.Now.Date;
             date_do.Value = DateTime.Now.AddDays(1) ;
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
+        }
     }
 }

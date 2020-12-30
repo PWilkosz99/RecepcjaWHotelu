@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,10 +38,17 @@ namespace RecepcjaWHotelu
                 bool x = queryResult.Read();
                 if (x)
                 {
+                    MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+                    UTF8Encoding utf8 = new UTF8Encoding();
+                    byte[] data = md5.ComputeHash(utf8.GetBytes(UPassword.Text));
+
+                    string fpsw = Convert.ToBase64String(data);
                     string psw = queryResult.GetString(0);
+                    //Console.WriteLine(fpsw);
+
                     queryResult.Close();
                     label_conn.Visible = false;
-                    if (UPassword.Text == psw)
+                    if (fpsw == psw)
                     {
                         MySqlCommand query2 = new MySqlCommand($"SELECT `counter` FROM `stats` WHERE `date` = '{DateTime.Now.ToShortDateString()}';", cnn);
                         MySqlDataReader query2Result = query2.ExecuteReader();

@@ -35,5 +35,12 @@ namespace RecepcjaWHotelu
                 MessageBox.Show("Uzupełnij pozostałe dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            var rezerwacja2 = new Rezerwacja();
+            rezerwacja2.Odrezerwuj();
+            MW.Instance.PnlContainter.Controls["Rezerwuj"].BringToFront();
+        }
     }
 }

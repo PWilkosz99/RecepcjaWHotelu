@@ -36,6 +36,7 @@ namespace RecepcjaWHotelu
             this.txt_nazwisko = new System.Windows.Forms.TextBox();
             this.txt_imie = new System.Windows.Forms.TextBox();
             this.txt_numer = new System.Windows.Forms.MaskedTextBox();
+            this.btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -98,10 +99,21 @@ namespace RecepcjaWHotelu
             this.txt_numer.TabIndex = 14;
             this.txt_numer.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(452, 24);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(141, 48);
+            this.btn_back.TabIndex = 21;
+            this.btn_back.Text = "Powrót";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // Rezerwuj2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -125,5 +137,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.TextBox txt_nazwisko;
         private System.Windows.Forms.TextBox txt_imie;
         private System.Windows.Forms.MaskedTextBox txt_numer;
+        private System.Windows.Forms.Button btn_back;
     }
 }

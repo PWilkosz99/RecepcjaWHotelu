@@ -35,6 +35,7 @@ namespace RecepcjaWHotelu
             this.txt_powod = new System.Windows.Forms.TextBox();
             this.btn_confirm = new System.Windows.Forms.Button();
             this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lb_pokoj
@@ -100,10 +101,21 @@ namespace RecepcjaWHotelu
             this.btn_delete.UseVisualStyleBackColor = true;
             this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(411, 14);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(141, 48);
+            this.btn_back.TabIndex = 6;
+            this.btn_back.Text = "Powrót";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // Wyklucz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.txt_powod);
@@ -126,5 +138,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.TextBox txt_powod;
         private System.Windows.Forms.Button btn_confirm;
         private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_back;
     }
 }

@@ -93,5 +93,31 @@ namespace RecepcjaWHotelu
                 cnn.Close();
             }
         }
+
+        public void Odrezerwuj()
+        {
+
+            MySqlConnection cnn;
+            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            string connetionString = sr.ReadLine();
+            sr.Close();
+            cnn = new MySqlConnection(connetionString);
+            try
+            {
+                cnn.Open();
+                Console.WriteLine("Connection Open OD!");
+                MySqlCommand query = new MySqlCommand($"DELETE FROM `rezerwacja` WHERE `id` = '{MW.CurrentC}';", cnn);
+            query.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Błąd połączenia z bazą danych\n\n{ex.ToString()}", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+
+                cnn.Close();
+            }
+        }
     }
 }

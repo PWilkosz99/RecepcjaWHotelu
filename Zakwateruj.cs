@@ -70,5 +70,10 @@ namespace RecepcjaWHotelu
 
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
+        }
     }
 }

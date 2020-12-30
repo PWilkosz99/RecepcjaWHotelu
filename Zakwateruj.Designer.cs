@@ -37,6 +37,7 @@ namespace RecepcjaWHotelu
             this.txt_nrrez = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bx_nrpokoju = new System.Windows.Forms.ComboBox();
+            this.btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_potwierdz
@@ -124,10 +125,21 @@ namespace RecepcjaWHotelu
             this.bx_nrpokoju.Size = new System.Drawing.Size(272, 21);
             this.bx_nrpokoju.TabIndex = 9;
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(559, 14);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(141, 48);
+            this.btn_back.TabIndex = 16;
+            this.btn_back.Text = "Powrót";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // Zakwateruj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.rd_pozniej);
             this.Controls.Add(this.rd_teraz);
@@ -152,5 +164,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.TextBox txt_nrrez;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox bx_nrpokoju;
+        private System.Windows.Forms.Button btn_back;
     }
 }

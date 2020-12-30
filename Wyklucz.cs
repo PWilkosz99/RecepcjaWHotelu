@@ -76,5 +76,10 @@ namespace RecepcjaWHotelu
         {
 
         }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
+        }
     }
 }

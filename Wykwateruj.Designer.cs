@@ -34,6 +34,7 @@ namespace RecepcjaWHotelu
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmb_numerpokoju = new System.Windows.Forms.ComboBox();
+            this.btn_back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txt_nrrezerwacji
@@ -46,7 +47,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_confirm
             // 
-            this.btn_confirm.Location = new System.Drawing.Point(214, 280);
+            this.btn_confirm.Location = new System.Drawing.Point(140, 278);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(141, 46);
             this.btn_confirm.TabIndex = 2;
@@ -91,10 +92,21 @@ namespace RecepcjaWHotelu
             this.cmb_numerpokoju.Size = new System.Drawing.Size(276, 21);
             this.cmb_numerpokoju.TabIndex = 5;
             // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(287, 276);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(141, 48);
+            this.btn_back.TabIndex = 6;
+            this.btn_back.Text = "Powrót";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
             // Wykwateruj
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_back);
             this.Controls.Add(this.cmb_numerpokoju);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -113,5 +125,6 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmb_numerpokoju;
+        private System.Windows.Forms.Button btn_back;
     }
 }
