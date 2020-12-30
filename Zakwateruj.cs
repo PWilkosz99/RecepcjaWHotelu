@@ -19,35 +19,52 @@ namespace RecepcjaWHotelu
 
         private void btn_potwierdz_Click(object sender, EventArgs e)
         {
-            Zakwaterowanie zakwaterowanie = new Zakwaterowanie();
-            if(txt_nrrez.Text!="")
-                zakwaterowanie.nr_rezerwacji = Int64.Parse(txt_nrrez.Text);
-            if (bx_nrpokoju.Text != "")
-                zakwaterowanie.nr_pokoju = Int32.Parse(bx_nrpokoju.Text); 
-            bool nxtst = zakwaterowanie.Zakwateruj();
 
-            if (rd_teraz.Checked)
+            if(txt_nrrez.Text != "" && bx_nrpokoju.Text != "")
             {
-                if (!MW.Instance.PnlContainter.Controls.ContainsKey("Platnosc"))
+                Zakwaterowanie zakwaterowanie = new Zakwaterowanie();
+                zakwaterowanie.nr_rezerwacji = Int64.Parse(txt_nrrez.Text);
+                zakwaterowanie.nr_pokoju = Int32.Parse(bx_nrpokoju.Text);
+                bool nxtst = zakwaterowanie.Zakwateruj();
+
+                if (rd_teraz.Checked)
                 {
-                    Platnosc platnosc = new Platnosc();
-                    platnosc.Dock = DockStyle.Fill;
-                    MW.Instance.PnlContainter.Controls.Add(platnosc);
+                    if (!MW.Instance.PnlContainter.Controls.ContainsKey("Platnosc"))
+                    {
+                        Platnosc platnosc = new Platnosc();
+                        platnosc.Dock = DockStyle.Fill;
+                        MW.Instance.PnlContainter.Controls.Add(platnosc);
+                    }
+                    if (nxtst)
+                    {
+                        MW.Instance.PnlContainter.Controls["Platnosc"].BringToFront();
+                        MW.CurrentC = txt_nrrez.Text;
+                        txt_nrrez.Text = "";
+                        bx_nrpokoju.SelectedIndex = 0;
+                    }
+                    
                 }
-                if(nxtst)
-                    MW.Instance.PnlContainter.Controls["Platnosc"].BringToFront();
-                MW.CurrentC = txt_nrrez.Text;
-            }
-            else if (rd_pozniej.Checked)
-            {
-                if(nxtst)
-                    MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
+                else if (rd_pozniej.Checked)
+                {
+                    if (nxtst)
+                    {
+                        MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
+                        txt_nrrez.Text = "";
+                        bx_nrpokoju.SelectedIndex = 0;
+                    }    
+                }
+                else
+                {
+                    MessageBox.Show("Proszę wybrać rodzaj płatności", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                MessageBox.Show("Proszę wybrać rodzaj płatności", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Proszę uzupełnić pozostałe dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
         }
+
         private void txt_nrrez_KeyPress(object sender, KeyPressEventArgs e)
         {
 

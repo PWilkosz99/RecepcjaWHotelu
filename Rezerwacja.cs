@@ -77,6 +77,9 @@ namespace RecepcjaWHotelu
                 Console.WriteLine("Connection Open R2!");
                 MySqlCommand query = new MySqlCommand($"UPDATE `rezerwacja` SET `imie`='{imie}',`nazwisko`='{nazwisko}',`nrtelefonu`='{nrtelefonu}' WHERE `id`={MW.CurrentC} ;", cnn);
                 query.ExecuteNonQuery();
+                MW.Counter++;
+                MySqlCommand query2 = new MySqlCommand($"UPDATE `stats` SET `counter`='{MW.Counter}' WHERE `date` ='{DateTime.Now.ToShortDateString()}' ;", cnn);
+                query2.ExecuteNonQuery();
                 MW.CurrentC = "";
                 cnn.Close();
             }

@@ -14,6 +14,7 @@ namespace RecepcjaWHotelu
     {
         static MW _obj;
         static string curclient;
+        static int counter;
 
         public static MW Instance
         {
@@ -31,6 +32,12 @@ namespace RecepcjaWHotelu
         {
             get { return curclient; }
             set { curclient = value; }
+        }
+
+        public static int Counter
+        {
+            get { return counter; }
+            set { counter = value; }
         }
 
         public Panel PnlContainter

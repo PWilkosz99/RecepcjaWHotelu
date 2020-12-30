@@ -38,10 +38,26 @@ namespace RecepcjaWHotelu
                 if (x)
                 {
                     string psw = queryResult.GetString(0);
-                    cnn.Close();
+                    queryResult.Close();
                     label_conn.Visible = false;
                     if (UPassword.Text == psw)
                     {
+                        MySqlCommand query2 = new MySqlCommand($"SELECT `counter` FROM `stats` WHERE `date` = '{DateTime.Now.ToShortDateString()}';", cnn);
+                        MySqlDataReader query2Result = query2.ExecuteReader();
+                        if (query2Result.Read())
+                        {
+                            MW.Counter = Int32.Parse(query2Result.GetString(0));
+                            query2Result.Close();
+                        }
+                        else
+                        {
+                            query2Result.Close();
+                            MW.Counter = 0;
+                            MySqlCommand query3 = new MySqlCommand($"INSERT INTO `stats`(`date`, `counter`) VALUES ('{DateTime.Now.ToShortDateString()}','0');", cnn);
+                            query3.ExecuteNonQuery();
+                        }
+                        cnn.Close();
+
                         if (!MW.Instance.PnlContainter.Controls.ContainsKey("Menu"))
                         {
                             Menu menu = new Menu();
@@ -49,15 +65,18 @@ namespace RecepcjaWHotelu
                             MW.Instance.PnlContainter.Controls.Add(menu);
                         }
                         MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
+                        ULogin.Text = "";
+                        UPassword.Text = "";
                     }
                     else
                     {
+                        cnn.Close();
                         MessageBox.Show("Wprowadzono błędne dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
+
                 }
                 else
                 {
-
                     MessageBox.Show("Wprowadzono błędne dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }

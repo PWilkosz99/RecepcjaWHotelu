@@ -36,14 +36,14 @@ namespace RecepcjaWHotelu
             // 
             this.panelContainer.Location = new System.Drawing.Point(57, 63);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(918, 418);
+            this.panelContainer.Size = new System.Drawing.Size(1057, 503);
             this.panelContainer.TabIndex = 0;
             // 
             // MW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 569);
+            this.ClientSize = new System.Drawing.Size(1117, 566);
             this.Controls.Add(this.panelContainer);
             this.Name = "MW";
             this.Text = "Recepcjonista";

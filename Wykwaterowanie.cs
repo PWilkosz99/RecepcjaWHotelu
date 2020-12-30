@@ -40,7 +40,7 @@ namespace RecepcjaWHotelu
                     if (z)
                     {
                         string pay = query3Result.GetString(0);
-                        if (pay == "1")
+                        if (pay == "True")
                         {
                             cnn.Close();
                             return 1;
@@ -73,6 +73,7 @@ namespace RecepcjaWHotelu
                     MySqlDataReader query4Result = query4.ExecuteReader();
                     bool j = query4Result.Read();
                     nr_rezerwacji = Int64.Parse(query4Result.GetString(0));
+                    Console.WriteLine(nr_rezerwacji);
                     query4Result.Close();
                     MySqlCommand query2 = new MySqlCommand($"DELETE FROM `zakwaterowanie` WHERE `npokoju` = '{nr_pokoju}';", cnn);
                     query2.ExecuteNonQuery();
@@ -82,7 +83,8 @@ namespace RecepcjaWHotelu
                     if (z)
                     {
                         string pay = query3Result.GetString(0);
-                        if (pay == "1")
+                        Console.WriteLine(pay);
+                        if (pay == "True")
                         {
                             cnn.Close();
                             return 1;

@@ -19,28 +19,38 @@ namespace RecepcjaWHotelu
 
         private void btn_confirm_Click(object sender, EventArgs e)
         {
-            Wykwaterowanie wykwaterowanie = new Wykwaterowanie();
-            if(cmb_numerpokoju.Text!="")
-                wykwaterowanie.nr_pokoju = Int32.Parse(cmb_numerpokoju.Text);
-            if(txt_nrrezerwacji.Text!="")
-                wykwaterowanie.nr_rezerwacji = Int64.Parse(txt_nrrezerwacji.Text);
-            //bool status = wykwaterowanie.Wykwateruj();
-            byte c = wykwaterowanie.Wykwateruj();
-            if (c==1)
+            if (!(cmb_numerpokoju.Text == "" && txt_nrrezerwacji.Text == ""))
             {
-                MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
-            }
-            else if(c==0)
-            {
-                if (!MW.Instance.PnlContainter.Controls.ContainsKey("Platnosc"))
+                Wykwaterowanie wykwaterowanie = new Wykwaterowanie();
+                if (cmb_numerpokoju.Text != "")
+                    wykwaterowanie.nr_pokoju = Int32.Parse(cmb_numerpokoju.Text);
+                if (txt_nrrezerwacji.Text != "")
+                    wykwaterowanie.nr_rezerwacji = Int64.Parse(txt_nrrezerwacji.Text);
+                //bool status = wykwaterowanie.Wykwateruj();
+                byte c = wykwaterowanie.Wykwateruj();
+                if (c == 1)
                 {
-                    Platnosc platnosc = new Platnosc();
-                    platnosc.Dock = DockStyle.Fill;
-                    MW.Instance.PnlContainter.Controls.Add(platnosc);
+                    MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
+                    //cmb_numerpokoju.SelectedIndex = 0;
+                    //txt_nrrezerwacji.Text = "";
                 }
+                else if (c == 0)
+                {
+                    if (!MW.Instance.PnlContainter.Controls.ContainsKey("Platnosc"))
+                    {
+                        Platnosc platnosc = new Platnosc();
+                        platnosc.Dock = DockStyle.Fill;
+                        MW.Instance.PnlContainter.Controls.Add(platnosc);
+                    }
                     MW.Instance.PnlContainter.Controls["Platnosc"].BringToFront();
+                    //cmb_numerpokoju.SelectedIndex = 0;
+                    //txt_nrrezerwacji.Text = "";
+                }
             }
-
+            else
+            {
+                MessageBox.Show("Uzupełnij dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void txt_nrrezerwacji_KeyPress(object sender, KeyPressEventArgs e)

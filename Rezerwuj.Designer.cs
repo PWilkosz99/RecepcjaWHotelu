@@ -190,6 +190,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.txt_nrrez);
             this.Name = "Rezerwuj";
             this.Size = new System.Drawing.Size(632, 494);
+            this.Load += new System.EventHandler(this.Rezerwuj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
