@@ -32,13 +32,18 @@ namespace RecepcjaWHotelu
             this.dg = new System.Windows.Forms.DataGridView();
             this.btn_back = new System.Windows.Forms.Button();
             this.btn_refresh = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
             // dg
             // 
+            this.dg.AllowUserToAddRows = false;
+            this.dg.AllowUserToDeleteRows = false;
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg.Location = new System.Drawing.Point(31, 0);
+            this.dg.MultiSelect = false;
             this.dg.Name = "dg";
             this.dg.Size = new System.Drawing.Size(777, 393);
             this.dg.TabIndex = 0;
@@ -63,10 +68,32 @@ namespace RecepcjaWHotelu
             this.btn_refresh.UseVisualStyleBackColor = true;
             this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
             // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(422, 399);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(141, 48);
+            this.btn_delete.TabIndex = 3;
+            this.btn_delete.Text = "Usuń";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(264, 399);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(141, 48);
+            this.btn_update.TabIndex = 4;
+            this.btn_update.Text = "Aktualizuj";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
             // Zaplanowane
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_refresh);
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.dg);
@@ -82,5 +109,7 @@ namespace RecepcjaWHotelu
         private System.Windows.Forms.DataGridView dg;
         private System.Windows.Forms.Button btn_back;
         private System.Windows.Forms.Button btn_refresh;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Button btn_update;
     }
 }

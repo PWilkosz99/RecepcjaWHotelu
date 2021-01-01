@@ -16,38 +16,32 @@ namespace RecepcjaWHotelu
     {
         public void Populate(string id, string dataod, string datado, string iloscos, string parking, string jedzenie, string spa, string silownia, string imie, string nazwisko, string nrtel)
         {
+            bool prk = false;
+            bool fd = false;
+            bool sil = false;
+            bool sp = false;
             if (parking == "True")
             {
-                parking = "✅";
-            }else if(parking !="True")
-            {
-                parking = "❎";
+                //parking = "✅";
+                prk = true;
             }
             if (jedzenie == "True")
             {
                 jedzenie = "✅";
-            }
-            else if (jedzenie != "True")
-            {
-                jedzenie = "❎";
+                fd = true;
             }
             if (spa == "True")
             {
                 spa = "✅";
-            }
-            else if (spa != "True")
-            {
-                spa = "❎";
+                sp = true;
             }
             if (silownia == "True")
             {
-                silownia = "✅";
+                //silownia = "✅";
+                sil = true;
             }
-            else if (silownia != "True")
-            {
-                silownia = "❎";
-            }
-            dg.Rows.Add(id, imie, nazwisko, nrtel, dataod, datado, iloscos, parking, jedzenie, spa, silownia);
+
+            dg.Rows.Add(id, imie, nazwisko, nrtel, dataod, datado, iloscos, prk, fd, sp, sil);
         }
 
 
@@ -81,10 +75,88 @@ namespace RecepcjaWHotelu
                 cnn.Close();
             }
         }
+
+        public void Delete(long id)
+        {
+            MySqlConnection cnn;
+            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            string connetionString = sr.ReadLine();
+            sr.Close();
+            cnn = new MySqlConnection(connetionString);
+            string sql = $"DELETE FROM `rezerwacja` WHERE ID='{id}'";
+            MySqlCommand cmd = new MySqlCommand(sql, cnn);
+
+            try
+            {
+                cnn.Open();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                adapter.DeleteCommand = cnn.CreateCommand();
+                adapter.DeleteCommand.CommandText = sql;
+                cmd.ExecuteNonQuery();
+
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cnn.Close();
+            }
+        }
+
+        public void Update(string id, string dataod, string datado, string iloscos, string parking, string jedzenie, string spa, string silownia, string imie, string nazwisko, string nrtel)
+        {
+            MySqlConnection cnn;
+            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            string connetionString = sr.ReadLine();
+            sr.Close();
+            cnn = new MySqlConnection(connetionString);
+            byte prk = 0;
+            byte fd = 0;
+            byte sp = 0;
+            byte sil = 0;
+
+            if (parking == "True")
+            {
+                prk = 1;
+            }
+            if (jedzenie == "True")
+            {
+                fd = 1;
+            }
+            if (spa == "True")
+            {
+                sp = 1;
+            }
+            if (silownia == "True")
+            {
+               sil  = 1;
+            }
+
+
+            string sql = $"UPDATE `rezerwacja` SET `id`='{id}',`dataod`='{dataod}',`datado`='{datado}',`iloscosob`='{iloscos}',`czyparking`='{prk}',`czyjedzenie`='{fd}',`czyspa`='{sp}',`czysilownia`='{sil}',`imie`='{imie}',`nazwisko`='{nazwisko}',`nrtelefonu`='{nrtel}' WHERE `id`='{id}'";
+            MySqlCommand cmd = new MySqlCommand(sql, cnn);
+
+            try
+            {
+                cnn.Open();
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                adapter.UpdateCommand = cnn.CreateCommand();
+                adapter.UpdateCommand.CommandText = sql;
+                cmd.ExecuteNonQuery();
+
+                cnn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                cnn.Close();
+            }
+        }
+
         public Zaplanowane()
         {
             InitializeComponent();
-            dg.ColumnCount = 11;
+            dg.ColumnCount = 7;
             dg.Columns[0].Name = "Numer rezerwacji";
             dg.Columns[1].Name = "Imie";
             dg.Columns[2].Name = "Nazwisko";
@@ -92,14 +164,30 @@ namespace RecepcjaWHotelu
             dg.Columns[4].Name = "Data od";
             dg.Columns[5].Name = "Data do";
             dg.Columns[6].Name = "Ilość osób";
-            dg.Columns[7].Name = "Parking";
-            dg.Columns[8].Name = "Wyżywienie";
-            dg.Columns[9].Name = "SPA";
-            dg.Columns[10].Name = "Siłownia";
+            //dg.Columns[7].Name = "Parking";
+            //dg.Columns[8].Name = "Wyżywienie";
+            //dg.Columns[9].Name = "SPA";
+            //dg.Columns[10].Name = "Siłownia";
+            DataGridViewCheckBoxColumn parking = new DataGridViewCheckBoxColumn();
+            parking.ValueType = typeof(bool);
+            parking.HeaderText = "Parking";
+            dg.Columns.Add(parking);
+            DataGridViewCheckBoxColumn food = new DataGridViewCheckBoxColumn();
+            food.ValueType = typeof(bool);
+            food.HeaderText = "Wyżywienie";
+            dg.Columns.Add(food);
+            DataGridViewCheckBoxColumn spa = new DataGridViewCheckBoxColumn();
+            spa.ValueType = typeof(bool);
+            spa.HeaderText = "Spa";
+            dg.Columns.Add(spa);
+            DataGridViewCheckBoxColumn sil = new DataGridViewCheckBoxColumn();
+            sil.ValueType = typeof(bool);
+            sil.HeaderText = "Silownia";
+            dg.Columns.Add(sil);
+            dg.Columns[0].MinimumWidth = 70;
             dg.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
             dg.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dg.MultiSelect = false;
+            dg.Columns[0].ReadOnly = true;
             Apped();
         }
 
@@ -110,6 +198,33 @@ namespace RecepcjaWHotelu
 
         private void btn_refresh_Click(object sender, EventArgs e)
         {
+            dg.Rows.Clear();
+            Apped();
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            long selected = Int64.Parse(dg.SelectedRows[0].Cells[0].Value.ToString());
+            Delete(selected);
+            dg.Rows.Clear();
+            Apped();
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            string selected = dg.SelectedRows[0].Cells[0].Value.ToString();
+            string imie = dg.SelectedRows[0].Cells[1].Value.ToString();
+            string nazwisko = dg.SelectedRows[0].Cells[2].Value.ToString();
+            string numer = dg.SelectedRows[0].Cells[3].Value.ToString();
+            string dataod = dg.SelectedRows[0].Cells[4].Value.ToString();
+            string datado = dg.SelectedRows[0].Cells[5].Value.ToString();
+            string ilos = dg.SelectedRows[0].Cells[6].Value.ToString();
+            string parking = dg.SelectedRows[0].Cells[7].Value.ToString();
+            string jedzenie = dg.SelectedRows[0].Cells[8].Value.ToString();
+            string spa = dg.SelectedRows[0].Cells[9].Value.ToString();
+            string silownia = dg.SelectedRows[0].Cells[10].Value.ToString();
+            //Console.WriteLine(spa);
+            Update(selected, dataod, datado, ilos, parking, jedzenie, spa, silownia, imie, nazwisko, numer);
             dg.Rows.Clear();
             Apped();
         }
