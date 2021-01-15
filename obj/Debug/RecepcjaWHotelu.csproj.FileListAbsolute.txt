@@ -8,7 +8,6 @@ E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.exe
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.pdb
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.MW.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Login.resources
-E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.csprojAssemblyReference.cache
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Menu.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Zakwateruj.resources
 E:\GIT REPO\RecepcjaWHotelu\bin\Debug\BouncyCastle.Crypto.dll
@@ -43,3 +42,10 @@ E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Rezerwuj2.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Wyswietl.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Wyklucz.resources
 E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.Zaplanowane.resources
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\GIT REPO\RecepcjaWHotelu\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\GIT REPO\RecepcjaWHotelu\obj\Debug\RecepcjaWHotelu.csprojAssemblyReference.cache

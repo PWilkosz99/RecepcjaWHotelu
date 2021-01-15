@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace RecepcjaWHotelu
 {
-    class Wykwaterowanie
+    public class Wykwaterowanie
     {
         public long nr_rezerwacji;
         public int nr_pokoju;
@@ -68,7 +68,6 @@ namespace RecepcjaWHotelu
                 queryResult.Close();
                 if (x)
                 {
-
                     MySqlCommand query4 = new MySqlCommand($"SELECT `nrezerwacji` FROM `zakwaterowanie` WHERE `npokoju`= '{nr_pokoju}';", cnn);
                     MySqlDataReader query4Result = query4.ExecuteReader();
                     bool j = query4Result.Read();

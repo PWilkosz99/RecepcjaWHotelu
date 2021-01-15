@@ -27,6 +27,7 @@ namespace RecepcjaWHotelu
                 var rezerwacja = new Rezerwacja();
                 rezerwacja.nrezerwacji = Int64.Parse(txt_nrrez.Text);
                 rezerwacja.dataod = date_od.Value.ToShortDateString();
+                Console.WriteLine(rezerwacja.dataod);
                 rezerwacja.datado = date_do.Value.ToShortDateString();
                 rezerwacja.ilosob = Int32.Parse(cmb_osob.Text);
 

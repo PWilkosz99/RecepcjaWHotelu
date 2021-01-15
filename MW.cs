@@ -51,7 +51,7 @@ namespace RecepcjaWHotelu
             InitializeComponent();
         }
 
-        private void MW_Load(object sender, EventArgs e)
+        public void MW_Load(object sender, EventArgs e)
         {
             _obj = this;
 

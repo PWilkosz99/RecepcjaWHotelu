@@ -23,6 +23,7 @@ namespace RecepcjaWHotelu
         public string imie;
         public string nazwisko;
         public long nrtelefonu;
+
         public bool Rezerwuj()
         {
             MySqlConnection cnn;
