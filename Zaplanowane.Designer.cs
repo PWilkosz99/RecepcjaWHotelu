@@ -42,7 +42,7 @@ namespace RecepcjaWHotelu
             this.dg.AllowUserToAddRows = false;
             this.dg.AllowUserToDeleteRows = false;
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dg.Location = new System.Drawing.Point(31, 0);
+            this.dg.Location = new System.Drawing.Point(250, 53);
             this.dg.MultiSelect = false;
             this.dg.Name = "dg";
             this.dg.Size = new System.Drawing.Size(777, 393);
@@ -50,9 +50,9 @@ namespace RecepcjaWHotelu
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(667, 399);
+            this.btn_back.Location = new System.Drawing.Point(871, 516);
             this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(141, 48);
+            this.btn_back.Size = new System.Drawing.Size(156, 48);
             this.btn_back.TabIndex = 1;
             this.btn_back.Text = "Powrót";
             this.btn_back.UseVisualStyleBackColor = true;
@@ -60,9 +60,9 @@ namespace RecepcjaWHotelu
             // 
             // btn_refresh
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(54, 399);
+            this.btn_refresh.Location = new System.Drawing.Point(250, 516);
             this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(118, 48);
+            this.btn_refresh.Size = new System.Drawing.Size(140, 48);
             this.btn_refresh.TabIndex = 2;
             this.btn_refresh.Text = "Odśwież";
             this.btn_refresh.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@ namespace RecepcjaWHotelu
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(422, 399);
+            this.btn_delete.Location = new System.Drawing.Point(618, 516);
             this.btn_delete.Name = "btn_delete";
-            this.btn_delete.Size = new System.Drawing.Size(141, 48);
+            this.btn_delete.Size = new System.Drawing.Size(156, 48);
             this.btn_delete.TabIndex = 3;
             this.btn_delete.Text = "Usuń";
             this.btn_delete.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@ namespace RecepcjaWHotelu
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(264, 399);
+            this.btn_update.Location = new System.Drawing.Point(460, 516);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(141, 48);
+            this.btn_update.Size = new System.Drawing.Size(156, 48);
             this.btn_update.TabIndex = 4;
             this.btn_update.Text = "Aktualizuj";
             this.btn_update.UseVisualStyleBackColor = true;
@@ -98,7 +98,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.btn_back);
             this.Controls.Add(this.dg);
             this.Name = "Zaplanowane";
-            this.Size = new System.Drawing.Size(905, 541);
+            this.Size = new System.Drawing.Size(1276, 716);
             ((System.ComponentModel.ISupportInitialize)(this.dg)).EndInit();
             this.ResumeLayout(false);
 

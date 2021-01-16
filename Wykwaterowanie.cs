@@ -51,6 +51,7 @@ namespace RecepcjaWHotelu
                 else
                 {
                     MessageBox.Show($"Brak rezerwacji o podanym numerze", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return 3;
                 }
             }
             else if (nr_pokoju !=0)
@@ -95,13 +96,14 @@ namespace RecepcjaWHotelu
                 else
                 {
                     MessageBox.Show($"Brak rezerwacji o podanym numerze pokoju", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return 3;
                 }
             }
             else
             {
                 MessageBox.Show($"Proszę wpisać numer rezerwacji lub numer pokoju", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return 3;
             }
-            return 3;
         }
     }
 }

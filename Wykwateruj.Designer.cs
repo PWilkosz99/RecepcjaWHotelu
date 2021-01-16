@@ -39,7 +39,7 @@ namespace RecepcjaWHotelu
             // 
             // txt_nrrezerwacji
             // 
-            this.txt_nrrezerwacji.Location = new System.Drawing.Point(140, 110);
+            this.txt_nrrezerwacji.Location = new System.Drawing.Point(500, 248);
             this.txt_nrrezerwacji.Name = "txt_nrrezerwacji";
             this.txt_nrrezerwacji.Size = new System.Drawing.Size(276, 20);
             this.txt_nrrezerwacji.TabIndex = 1;
@@ -47,7 +47,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_confirm
             // 
-            this.btn_confirm.Location = new System.Drawing.Point(140, 278);
+            this.btn_confirm.Location = new System.Drawing.Point(500, 418);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(141, 46);
             this.btn_confirm.TabIndex = 2;
@@ -58,7 +58,7 @@ namespace RecepcjaWHotelu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(169, 94);
+            this.label1.Location = new System.Drawing.Point(514, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 3;
@@ -67,7 +67,7 @@ namespace RecepcjaWHotelu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(169, 174);
+            this.label2.Location = new System.Drawing.Point(514, 314);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
             this.label2.TabIndex = 4;
@@ -87,14 +87,14 @@ namespace RecepcjaWHotelu
             "7",
             "8",
             "9"});
-            this.cmb_numerpokoju.Location = new System.Drawing.Point(140, 190);
+            this.cmb_numerpokoju.Location = new System.Drawing.Point(500, 330);
             this.cmb_numerpokoju.Name = "cmb_numerpokoju";
             this.cmb_numerpokoju.Size = new System.Drawing.Size(276, 21);
             this.cmb_numerpokoju.TabIndex = 5;
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(287, 276);
+            this.btn_back.Location = new System.Drawing.Point(647, 416);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(141, 48);
             this.btn_back.TabIndex = 6;
@@ -113,7 +113,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.btn_confirm);
             this.Controls.Add(this.txt_nrrezerwacji);
             this.Name = "Wykwateruj";
-            this.Size = new System.Drawing.Size(584, 415);
+            this.Size = new System.Drawing.Size(1276, 716);
             this.ResumeLayout(false);
             this.PerformLayout();
 

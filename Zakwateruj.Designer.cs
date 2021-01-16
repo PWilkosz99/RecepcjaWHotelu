@@ -42,7 +42,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_potwierdz
             // 
-            this.btn_potwierdz.Location = new System.Drawing.Point(258, 285);
+            this.btn_potwierdz.Location = new System.Drawing.Point(516, 424);
             this.btn_potwierdz.Name = "btn_potwierdz";
             this.btn_potwierdz.Size = new System.Drawing.Size(244, 41);
             this.btn_potwierdz.TabIndex = 8;
@@ -53,7 +53,7 @@ namespace RecepcjaWHotelu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(298, 191);
+            this.label3.Location = new System.Drawing.Point(558, 340);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 13);
             this.label3.TabIndex = 15;
@@ -62,7 +62,7 @@ namespace RecepcjaWHotelu
             // rd_pozniej
             // 
             this.rd_pozniej.AutoSize = true;
-            this.rd_pozniej.Location = new System.Drawing.Point(283, 242);
+            this.rd_pozniej.Location = new System.Drawing.Point(543, 391);
             this.rd_pozniej.Name = "rd_pozniej";
             this.rd_pozniej.Size = new System.Drawing.Size(117, 17);
             this.rd_pozniej.TabIndex = 14;
@@ -73,7 +73,7 @@ namespace RecepcjaWHotelu
             // rd_teraz
             // 
             this.rd_teraz.AutoSize = true;
-            this.rd_teraz.Location = new System.Drawing.Point(283, 219);
+            this.rd_teraz.Location = new System.Drawing.Point(543, 368);
             this.rd_teraz.Name = "rd_teraz";
             this.rd_teraz.Size = new System.Drawing.Size(52, 17);
             this.rd_teraz.TabIndex = 13;
@@ -84,7 +84,7 @@ namespace RecepcjaWHotelu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 63);
+            this.label2.Location = new System.Drawing.Point(540, 212);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 12;
@@ -92,7 +92,7 @@ namespace RecepcjaWHotelu
             // 
             // txt_nrrez
             // 
-            this.txt_nrrez.Location = new System.Drawing.Point(256, 79);
+            this.txt_nrrez.Location = new System.Drawing.Point(516, 228);
             this.txt_nrrez.Name = "txt_nrrez";
             this.txt_nrrez.Size = new System.Drawing.Size(270, 20);
             this.txt_nrrez.TabIndex = 11;
@@ -101,7 +101,7 @@ namespace RecepcjaWHotelu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(280, 138);
+            this.label1.Location = new System.Drawing.Point(540, 287);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 10;
@@ -120,14 +120,14 @@ namespace RecepcjaWHotelu
             "7",
             "8",
             "9"});
-            this.bx_nrpokoju.Location = new System.Drawing.Point(256, 154);
+            this.bx_nrpokoju.Location = new System.Drawing.Point(516, 303);
             this.bx_nrpokoju.Name = "bx_nrpokoju";
             this.bx_nrpokoju.Size = new System.Drawing.Size(272, 21);
             this.bx_nrpokoju.TabIndex = 9;
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(559, 14);
+            this.btn_back.Location = new System.Drawing.Point(819, 163);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(141, 48);
             this.btn_back.TabIndex = 16;
@@ -149,7 +149,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.bx_nrpokoju);
             this.Controls.Add(this.btn_potwierdz);
             this.Name = "Zakwateruj";
-            this.Size = new System.Drawing.Size(847, 386);
+            this.Size = new System.Drawing.Size(1276, 716);
             this.ResumeLayout(false);
             this.PerformLayout();
 

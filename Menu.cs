@@ -82,5 +82,15 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Zaplanowane"].BringToFront();
         }
+
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            MW.Instance.PnlContainter.Controls["Login"].BringToFront();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

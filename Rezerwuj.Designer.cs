@@ -47,7 +47,7 @@ namespace RecepcjaWHotelu
             // 
             // txt_nrrez
             // 
-            this.txt_nrrez.Location = new System.Drawing.Point(150, 56);
+            this.txt_nrrez.Location = new System.Drawing.Point(515, 127);
             this.txt_nrrez.MaxLength = 30;
             this.txt_nrrez.Name = "txt_nrrez";
             this.txt_nrrez.Size = new System.Drawing.Size(247, 20);
@@ -56,7 +56,7 @@ namespace RecepcjaWHotelu
             // 
             // date_od
             // 
-            this.date_od.Location = new System.Drawing.Point(145, 121);
+            this.date_od.Location = new System.Drawing.Point(516, 189);
             this.date_od.Name = "date_od";
             this.date_od.Size = new System.Drawing.Size(246, 20);
             this.date_od.TabIndex = 1;
@@ -64,7 +64,7 @@ namespace RecepcjaWHotelu
             // 
             // date_do
             // 
-            this.date_do.Location = new System.Drawing.Point(145, 174);
+            this.date_do.Location = new System.Drawing.Point(516, 242);
             this.date_do.Name = "date_do";
             this.date_do.Size = new System.Drawing.Size(246, 20);
             this.date_do.TabIndex = 2;
@@ -81,14 +81,14 @@ namespace RecepcjaWHotelu
             "4",
             "5",
             "6"});
-            this.cmb_osob.Location = new System.Drawing.Point(204, 232);
+            this.cmb_osob.Location = new System.Drawing.Point(575, 300);
             this.cmb_osob.Name = "cmb_osob";
             this.cmb_osob.Size = new System.Drawing.Size(121, 21);
             this.cmb_osob.TabIndex = 3;
             // 
             // btn_confirm
             // 
-            this.btn_confirm.Location = new System.Drawing.Point(148, 362);
+            this.btn_confirm.Location = new System.Drawing.Point(519, 430);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(249, 36);
             this.btn_confirm.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace RecepcjaWHotelu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(161, 158);
+            this.label1.Location = new System.Drawing.Point(532, 226);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(45, 13);
             this.label1.TabIndex = 5;
@@ -108,7 +108,7 @@ namespace RecepcjaWHotelu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 105);
+            this.label2.Location = new System.Drawing.Point(532, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 6;
@@ -117,16 +117,16 @@ namespace RecepcjaWHotelu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(161, 40);
+            this.label3.Location = new System.Drawing.Point(526, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 13);
+            this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Numer Rezerwacji";
+            this.label3.Text = "Numer rezerwacji:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(219, 216);
+            this.label4.Location = new System.Drawing.Point(590, 284);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 8;
@@ -135,7 +135,7 @@ namespace RecepcjaWHotelu
             // chk_parking
             // 
             this.chk_parking.AutoSize = true;
-            this.chk_parking.Location = new System.Drawing.Point(145, 272);
+            this.chk_parking.Location = new System.Drawing.Point(516, 340);
             this.chk_parking.Name = "chk_parking";
             this.chk_parking.Size = new System.Drawing.Size(120, 17);
             this.chk_parking.TabIndex = 9;
@@ -145,7 +145,7 @@ namespace RecepcjaWHotelu
             // chk_spa
             // 
             this.chk_spa.AutoSize = true;
-            this.chk_spa.Location = new System.Drawing.Point(316, 272);
+            this.chk_spa.Location = new System.Drawing.Point(687, 340);
             this.chk_spa.Name = "chk_spa";
             this.chk_spa.Size = new System.Drawing.Size(88, 17);
             this.chk_spa.TabIndex = 10;
@@ -155,7 +155,7 @@ namespace RecepcjaWHotelu
             // chk_jedzenie
             // 
             this.chk_jedzenie.AutoSize = true;
-            this.chk_jedzenie.Location = new System.Drawing.Point(145, 309);
+            this.chk_jedzenie.Location = new System.Drawing.Point(516, 377);
             this.chk_jedzenie.Name = "chk_jedzenie";
             this.chk_jedzenie.Size = new System.Drawing.Size(58, 17);
             this.chk_jedzenie.TabIndex = 11;
@@ -165,7 +165,7 @@ namespace RecepcjaWHotelu
             // chk_silownia
             // 
             this.chk_silownia.AutoSize = true;
-            this.chk_silownia.Location = new System.Drawing.Point(316, 309);
+            this.chk_silownia.Location = new System.Drawing.Point(687, 377);
             this.chk_silownia.Name = "chk_silownia";
             this.chk_silownia.Size = new System.Drawing.Size(114, 17);
             this.chk_silownia.TabIndex = 12;
@@ -174,7 +174,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(431, 22);
+            this.btn_back.Location = new System.Drawing.Point(825, 76);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(141, 48);
             this.btn_back.TabIndex = 13;
@@ -201,7 +201,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.date_od);
             this.Controls.Add(this.txt_nrrez);
             this.Name = "Rezerwuj";
-            this.Size = new System.Drawing.Size(632, 494);
+            this.Size = new System.Drawing.Size(1276, 716);
             this.Load += new System.EventHandler(this.Rezerwuj_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

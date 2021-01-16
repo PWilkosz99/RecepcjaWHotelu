@@ -41,7 +41,7 @@ namespace RecepcjaWHotelu
             // lb_pokoj
             // 
             this.lb_pokoj.AutoSize = true;
-            this.lb_pokoj.Location = new System.Drawing.Point(251, 96);
+            this.lb_pokoj.Location = new System.Drawing.Point(592, 168);
             this.lb_pokoj.Name = "lb_pokoj";
             this.lb_pokoj.Size = new System.Drawing.Size(73, 13);
             this.lb_pokoj.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace RecepcjaWHotelu
             "7",
             "8",
             "9"});
-            this.cmb_pokoj.Location = new System.Drawing.Point(186, 139);
+            this.cmb_pokoj.Location = new System.Drawing.Point(527, 211);
             this.cmb_pokoj.Name = "cmb_pokoj";
             this.cmb_pokoj.Size = new System.Drawing.Size(191, 21);
             this.cmb_pokoj.TabIndex = 1;
@@ -68,7 +68,7 @@ namespace RecepcjaWHotelu
             // lbl_powod
             // 
             this.lbl_powod.AutoSize = true;
-            this.lbl_powod.Location = new System.Drawing.Point(265, 213);
+            this.lbl_powod.Location = new System.Drawing.Point(606, 285);
             this.lbl_powod.Name = "lbl_powod";
             this.lbl_powod.Size = new System.Drawing.Size(40, 13);
             this.lbl_powod.TabIndex = 2;
@@ -76,14 +76,14 @@ namespace RecepcjaWHotelu
             // 
             // txt_powod
             // 
-            this.txt_powod.Location = new System.Drawing.Point(112, 241);
+            this.txt_powod.Location = new System.Drawing.Point(465, 324);
             this.txt_powod.Name = "txt_powod";
             this.txt_powod.Size = new System.Drawing.Size(346, 20);
             this.txt_powod.TabIndex = 3;
             // 
             // btn_confirm
             // 
-            this.btn_confirm.Location = new System.Drawing.Point(112, 334);
+            this.btn_confirm.Location = new System.Drawing.Point(465, 408);
             this.btn_confirm.Name = "btn_confirm";
             this.btn_confirm.Size = new System.Drawing.Size(163, 57);
             this.btn_confirm.TabIndex = 4;
@@ -93,7 +93,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_delete
             // 
-            this.btn_delete.Location = new System.Drawing.Point(281, 334);
+            this.btn_delete.Location = new System.Drawing.Point(634, 408);
             this.btn_delete.Name = "btn_delete";
             this.btn_delete.Size = new System.Drawing.Size(177, 57);
             this.btn_delete.TabIndex = 5;
@@ -103,7 +103,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(411, 14);
+            this.btn_back.Location = new System.Drawing.Point(752, 86);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(141, 48);
             this.btn_back.TabIndex = 6;
@@ -123,7 +123,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.cmb_pokoj);
             this.Controls.Add(this.lb_pokoj);
             this.Name = "Wyklucz";
-            this.Size = new System.Drawing.Size(971, 554);
+            this.Size = new System.Drawing.Size(1276, 716);
             this.Load += new System.EventHandler(this.Wyklucz_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

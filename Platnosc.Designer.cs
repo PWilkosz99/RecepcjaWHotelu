@@ -40,15 +40,15 @@ namespace RecepcjaWHotelu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 77);
+            this.label1.Location = new System.Drawing.Point(558, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Wartość rachunku";
+            this.label1.Text = "Wartość rachunku:";
             // 
             // txt_kwota
             // 
-            this.txt_kwota.Location = new System.Drawing.Point(200, 93);
+            this.txt_kwota.Location = new System.Drawing.Point(558, 93);
             this.txt_kwota.Name = "txt_kwota";
             this.txt_kwota.Size = new System.Drawing.Size(160, 20);
             this.txt_kwota.TabIndex = 1;
@@ -56,7 +56,7 @@ namespace RecepcjaWHotelu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(208, 130);
+            this.label2.Location = new System.Drawing.Point(558, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 2;
@@ -65,7 +65,7 @@ namespace RecepcjaWHotelu
             // rd_gotowka
             // 
             this.rd_gotowka.AutoSize = true;
-            this.rd_gotowka.Location = new System.Drawing.Point(200, 146);
+            this.rd_gotowka.Location = new System.Drawing.Point(561, 159);
             this.rd_gotowka.Name = "rd_gotowka";
             this.rd_gotowka.Size = new System.Drawing.Size(68, 17);
             this.rd_gotowka.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace RecepcjaWHotelu
             // rd_karta
             // 
             this.rd_karta.AutoSize = true;
-            this.rd_karta.Location = new System.Drawing.Point(200, 169);
+            this.rd_karta.Location = new System.Drawing.Point(561, 182);
             this.rd_karta.Name = "rd_karta";
             this.rd_karta.Size = new System.Drawing.Size(50, 17);
             this.rd_karta.TabIndex = 4;
@@ -86,9 +86,9 @@ namespace RecepcjaWHotelu
             // 
             // btn_confirm
             // 
-            this.btn_confirm.Location = new System.Drawing.Point(200, 238);
+            this.btn_confirm.Location = new System.Drawing.Point(558, 227);
             this.btn_confirm.Name = "btn_confirm";
-            this.btn_confirm.Size = new System.Drawing.Size(150, 46);
+            this.btn_confirm.Size = new System.Drawing.Size(160, 46);
             this.btn_confirm.TabIndex = 5;
             this.btn_confirm.Text = "Potwierdź";
             this.btn_confirm.UseVisualStyleBackColor = true;
@@ -105,7 +105,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.txt_kwota);
             this.Controls.Add(this.label1);
             this.Name = "Platnosc";
-            this.Size = new System.Drawing.Size(670, 347);
+            this.Size = new System.Drawing.Size(1276, 716);
             this.ResumeLayout(false);
             this.PerformLayout();
 

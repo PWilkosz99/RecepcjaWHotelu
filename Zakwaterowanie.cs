@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace RecepcjaWHotelu
 {
-    class Zakwaterowanie
+    public class Zakwaterowanie
     {
         public long nr_rezerwacji;
         public int nr_pokoju;

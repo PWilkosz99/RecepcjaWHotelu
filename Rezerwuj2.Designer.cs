@@ -42,7 +42,7 @@ namespace RecepcjaWHotelu
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(171, 157);
+            this.label5.Location = new System.Drawing.Point(529, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 20;
@@ -51,7 +51,7 @@ namespace RecepcjaWHotelu
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(166, 98);
+            this.label4.Location = new System.Drawing.Point(524, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 19;
@@ -60,7 +60,7 @@ namespace RecepcjaWHotelu
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(170, 42);
+            this.label3.Location = new System.Drawing.Point(524, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 18;
@@ -68,7 +68,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_potwierdz
             // 
-            this.btn_potwierdz.Location = new System.Drawing.Point(158, 253);
+            this.btn_potwierdz.Location = new System.Drawing.Point(516, 423);
             this.btn_potwierdz.Name = "btn_potwierdz";
             this.btn_potwierdz.Size = new System.Drawing.Size(244, 41);
             this.btn_potwierdz.TabIndex = 17;
@@ -78,21 +78,21 @@ namespace RecepcjaWHotelu
             // 
             // txt_nazwisko
             // 
-            this.txt_nazwisko.Location = new System.Drawing.Point(158, 114);
+            this.txt_nazwisko.Location = new System.Drawing.Point(516, 284);
             this.txt_nazwisko.Name = "txt_nazwisko";
             this.txt_nazwisko.Size = new System.Drawing.Size(244, 20);
             this.txt_nazwisko.TabIndex = 16;
             // 
             // txt_imie
             // 
-            this.txt_imie.Location = new System.Drawing.Point(158, 58);
+            this.txt_imie.Location = new System.Drawing.Point(516, 218);
             this.txt_imie.Name = "txt_imie";
             this.txt_imie.Size = new System.Drawing.Size(244, 20);
             this.txt_imie.TabIndex = 15;
             // 
             // txt_numer
             // 
-            this.txt_numer.Location = new System.Drawing.Point(158, 173);
+            this.txt_numer.Location = new System.Drawing.Point(516, 343);
             this.txt_numer.Mask = "(000) 000-000-000";
             this.txt_numer.Name = "txt_numer";
             this.txt_numer.Size = new System.Drawing.Size(244, 20);
@@ -101,7 +101,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(452, 24);
+            this.btn_back.Location = new System.Drawing.Point(805, 112);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(141, 48);
             this.btn_back.TabIndex = 21;
@@ -122,7 +122,7 @@ namespace RecepcjaWHotelu
             this.Controls.Add(this.txt_imie);
             this.Controls.Add(this.txt_numer);
             this.Name = "Rezerwuj2";
-            this.Size = new System.Drawing.Size(711, 413);
+            this.Size = new System.Drawing.Size(1276, 716);
             this.ResumeLayout(false);
             this.PerformLayout();
 

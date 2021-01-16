@@ -26,11 +26,17 @@ namespace RecepcjaWHotelu
 
         public bool Rezerwuj()
         {
+
             MySqlConnection cnn;
             StreamReader sr = File.OpenText(@"..\..\passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);
+
+            if ((MW.CurrentC == ""))
+            {
+                MW.CurrentC = "99999";
+            }
 
             try
             {
@@ -76,7 +82,7 @@ namespace RecepcjaWHotelu
             {
                 cnn.Open();
                 Console.WriteLine("Connection Open R2!");
-                MySqlCommand query = new MySqlCommand($"UPDATE `rezerwacja` SET `imie`='{imie}',`nazwisko`='{nazwisko}',`nrtelefonu`='{nrtelefonu}' WHERE `id`={MW.CurrentC} ;", cnn);
+                MySqlCommand query = new MySqlCommand($"UPDATE `rezerwacja` SET `imie`='{imie}',`nazwisko`='{nazwisko}',`nrtelefonu`='{nrtelefonu}' WHERE `id`='{MW.CurrentC}' ;", cnn);
                 query.ExecuteNonQuery();
                 MW.Counter++;
                 MySqlCommand query2 = new MySqlCommand($"UPDATE `stats` SET `counter`='{MW.Counter}' WHERE `date` ='{DateTime.Now.ToShortDateString()}' ;", cnn);

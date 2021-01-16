@@ -43,14 +43,14 @@ namespace RecepcjaWHotelu
             // 
             // ULogin
             // 
-            this.ULogin.Location = new System.Drawing.Point(415, 295);
+            this.ULogin.Location = new System.Drawing.Point(120, 122);
             this.ULogin.Name = "ULogin";
             this.ULogin.Size = new System.Drawing.Size(265, 20);
             this.ULogin.TabIndex = 0;
             // 
             // UPassword
             // 
-            this.UPassword.Location = new System.Drawing.Point(415, 371);
+            this.UPassword.Location = new System.Drawing.Point(120, 196);
             this.UPassword.Name = "UPassword";
             this.UPassword.Size = new System.Drawing.Size(265, 20);
             this.UPassword.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace RecepcjaWHotelu
             this.btn_check.BackColor = System.Drawing.Color.Transparent;
             this.btn_check.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btn_check.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btn_check.Location = new System.Drawing.Point(415, 463);
+            this.btn_check.Location = new System.Drawing.Point(120, 283);
             this.btn_check.Name = "btn_check";
             this.btn_check.Size = new System.Drawing.Size(265, 48);
             this.btn_check.TabIndex = 2;
@@ -72,7 +72,7 @@ namespace RecepcjaWHotelu
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 88);
+            this.label1.Location = new System.Drawing.Point(117, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 3;
@@ -81,7 +81,7 @@ namespace RecepcjaWHotelu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 170);
+            this.label2.Location = new System.Drawing.Point(117, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 4;
@@ -91,7 +91,7 @@ namespace RecepcjaWHotelu
             // 
             this.label_conn.AutoSize = true;
             this.label_conn.ForeColor = System.Drawing.Color.OliveDrab;
-            this.label_conn.Location = new System.Drawing.Point(412, 422);
+            this.label_conn.Location = new System.Drawing.Point(145, 244);
             this.label_conn.Name = "label_conn";
             this.label_conn.Size = new System.Drawing.Size(212, 13);
             this.label_conn.TabIndex = 5;
@@ -100,9 +100,13 @@ namespace RecepcjaWHotelu
             // 
             // gb
             // 
+            this.gb.Controls.Add(this.btn_check);
+            this.gb.Controls.Add(this.label_conn);
             this.gb.Controls.Add(this.label1);
             this.gb.Controls.Add(this.label2);
-            this.gb.Location = new System.Drawing.Point(294, 175);
+            this.gb.Controls.Add(this.UPassword);
+            this.gb.Controls.Add(this.ULogin);
+            this.gb.Location = new System.Drawing.Point(391, 175);
             this.gb.Name = "gb";
             this.gb.Size = new System.Drawing.Size(495, 415);
             this.gb.TabIndex = 6;
@@ -116,17 +120,12 @@ namespace RecepcjaWHotelu
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.label_conn);
-            this.Controls.Add(this.btn_check);
-            this.Controls.Add(this.UPassword);
-            this.Controls.Add(this.ULogin);
             this.Controls.Add(this.gb);
             this.Name = "Login";
             this.Size = new System.Drawing.Size(1276, 716);
             this.gb.ResumeLayout(false);
             this.gb.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
