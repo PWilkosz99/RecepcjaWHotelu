@@ -26,7 +26,7 @@ namespace RecepcjaWHotelu
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);
@@ -57,7 +57,7 @@ namespace RecepcjaWHotelu
         {
 
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);

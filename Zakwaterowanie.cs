@@ -20,7 +20,7 @@ namespace RecepcjaWHotelu
         public bool Zakwateruj()
         {
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);

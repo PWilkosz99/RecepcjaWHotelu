@@ -43,7 +43,7 @@ namespace RecepcjaTest
             byte c = wt.Wykwateruj();
 
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);
@@ -88,7 +88,7 @@ namespace RecepcjaTest
             byte c = wt.Wykwateruj();
 
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);

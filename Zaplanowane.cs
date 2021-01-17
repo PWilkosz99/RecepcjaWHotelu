@@ -64,7 +64,7 @@ namespace RecepcjaWHotelu
         public void Apped()
         {
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
 
@@ -98,7 +98,7 @@ namespace RecepcjaWHotelu
         public void Delete(long id)
         {
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);
@@ -138,7 +138,7 @@ namespace RecepcjaWHotelu
         public void Update(string id, string dataod, string datado, string iloscos, string parking, string jedzenie, string spa, string silownia, string imie, string nazwisko, string nrtel)
         {
             MySqlConnection cnn;
-            StreamReader sr = File.OpenText(@"..\..\passwd.txt");
+            StreamReader sr = File.OpenText(@"passwd.txt");
             string connetionString = sr.ReadLine();
             sr.Close();
             cnn = new MySqlConnection(connetionString);

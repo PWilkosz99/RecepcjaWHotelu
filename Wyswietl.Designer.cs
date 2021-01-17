@@ -64,7 +64,7 @@ namespace RecepcjaWHotelu
             // title
             // 
             this.title.AutoSize = true;
-            this.title.Location = new System.Drawing.Point(699, 55);
+            this.title.Location = new System.Drawing.Point(590, 56);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(105, 13);
             this.title.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace RecepcjaWHotelu
             // p1
             // 
             this.p1.AutoSize = true;
-            this.p1.Location = new System.Drawing.Point(558, 114);
+            this.p1.Location = new System.Drawing.Point(449, 115);
             this.p1.Name = "p1";
             this.p1.Size = new System.Drawing.Size(43, 13);
             this.p1.TabIndex = 1;
@@ -82,7 +82,7 @@ namespace RecepcjaWHotelu
             // p2
             // 
             this.p2.AutoSize = true;
-            this.p2.Location = new System.Drawing.Point(558, 146);
+            this.p2.Location = new System.Drawing.Point(449, 147);
             this.p2.Name = "p2";
             this.p2.Size = new System.Drawing.Size(43, 13);
             this.p2.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace RecepcjaWHotelu
             // p3
             // 
             this.p3.AutoSize = true;
-            this.p3.Location = new System.Drawing.Point(558, 176);
+            this.p3.Location = new System.Drawing.Point(449, 177);
             this.p3.Name = "p3";
             this.p3.Size = new System.Drawing.Size(43, 13);
             this.p3.TabIndex = 3;
@@ -100,7 +100,7 @@ namespace RecepcjaWHotelu
             // p4
             // 
             this.p4.AutoSize = true;
-            this.p4.Location = new System.Drawing.Point(558, 208);
+            this.p4.Location = new System.Drawing.Point(449, 209);
             this.p4.Name = "p4";
             this.p4.Size = new System.Drawing.Size(43, 13);
             this.p4.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace RecepcjaWHotelu
             // p5
             // 
             this.p5.AutoSize = true;
-            this.p5.Location = new System.Drawing.Point(558, 237);
+            this.p5.Location = new System.Drawing.Point(449, 238);
             this.p5.Name = "p5";
             this.p5.Size = new System.Drawing.Size(43, 13);
             this.p5.TabIndex = 5;
@@ -118,7 +118,7 @@ namespace RecepcjaWHotelu
             // p6
             // 
             this.p6.AutoSize = true;
-            this.p6.Location = new System.Drawing.Point(558, 269);
+            this.p6.Location = new System.Drawing.Point(449, 270);
             this.p6.Name = "p6";
             this.p6.Size = new System.Drawing.Size(43, 13);
             this.p6.TabIndex = 6;
@@ -127,7 +127,7 @@ namespace RecepcjaWHotelu
             // p7
             // 
             this.p7.AutoSize = true;
-            this.p7.Location = new System.Drawing.Point(558, 301);
+            this.p7.Location = new System.Drawing.Point(449, 302);
             this.p7.Name = "p7";
             this.p7.Size = new System.Drawing.Size(43, 13);
             this.p7.TabIndex = 7;
@@ -136,7 +136,7 @@ namespace RecepcjaWHotelu
             // p8
             // 
             this.p8.AutoSize = true;
-            this.p8.Location = new System.Drawing.Point(558, 335);
+            this.p8.Location = new System.Drawing.Point(449, 336);
             this.p8.Name = "p8";
             this.p8.Size = new System.Drawing.Size(43, 13);
             this.p8.TabIndex = 8;
@@ -145,7 +145,7 @@ namespace RecepcjaWHotelu
             // p9
             // 
             this.p9.AutoSize = true;
-            this.p9.Location = new System.Drawing.Point(558, 365);
+            this.p9.Location = new System.Drawing.Point(449, 366);
             this.p9.Name = "p9";
             this.p9.Size = new System.Drawing.Size(43, 13);
             this.p9.TabIndex = 9;
@@ -154,7 +154,7 @@ namespace RecepcjaWHotelu
             // s1
             // 
             this.s1.AutoSize = true;
-            this.s1.Location = new System.Drawing.Point(742, 114);
+            this.s1.Location = new System.Drawing.Point(633, 115);
             this.s1.Name = "s1";
             this.s1.Size = new System.Drawing.Size(51, 13);
             this.s1.TabIndex = 10;
@@ -163,7 +163,7 @@ namespace RecepcjaWHotelu
             // s2
             // 
             this.s2.AutoSize = true;
-            this.s2.Location = new System.Drawing.Point(742, 146);
+            this.s2.Location = new System.Drawing.Point(633, 147);
             this.s2.Name = "s2";
             this.s2.Size = new System.Drawing.Size(51, 13);
             this.s2.TabIndex = 11;
@@ -172,7 +172,7 @@ namespace RecepcjaWHotelu
             // s3
             // 
             this.s3.AutoSize = true;
-            this.s3.Location = new System.Drawing.Point(742, 176);
+            this.s3.Location = new System.Drawing.Point(633, 177);
             this.s3.Name = "s3";
             this.s3.Size = new System.Drawing.Size(51, 13);
             this.s3.TabIndex = 12;
@@ -181,7 +181,7 @@ namespace RecepcjaWHotelu
             // s4
             // 
             this.s4.AutoSize = true;
-            this.s4.Location = new System.Drawing.Point(742, 208);
+            this.s4.Location = new System.Drawing.Point(633, 209);
             this.s4.Name = "s4";
             this.s4.Size = new System.Drawing.Size(51, 13);
             this.s4.TabIndex = 13;
@@ -190,7 +190,7 @@ namespace RecepcjaWHotelu
             // s5
             // 
             this.s5.AutoSize = true;
-            this.s5.Location = new System.Drawing.Point(742, 237);
+            this.s5.Location = new System.Drawing.Point(633, 238);
             this.s5.Name = "s5";
             this.s5.Size = new System.Drawing.Size(51, 13);
             this.s5.TabIndex = 14;
@@ -199,7 +199,7 @@ namespace RecepcjaWHotelu
             // s6
             // 
             this.s6.AutoSize = true;
-            this.s6.Location = new System.Drawing.Point(742, 269);
+            this.s6.Location = new System.Drawing.Point(633, 270);
             this.s6.Name = "s6";
             this.s6.Size = new System.Drawing.Size(51, 13);
             this.s6.TabIndex = 15;
@@ -208,7 +208,7 @@ namespace RecepcjaWHotelu
             // s7
             // 
             this.s7.AutoSize = true;
-            this.s7.Location = new System.Drawing.Point(742, 301);
+            this.s7.Location = new System.Drawing.Point(633, 302);
             this.s7.Name = "s7";
             this.s7.Size = new System.Drawing.Size(51, 13);
             this.s7.TabIndex = 16;
@@ -217,7 +217,7 @@ namespace RecepcjaWHotelu
             // s8
             // 
             this.s8.AutoSize = true;
-            this.s8.Location = new System.Drawing.Point(742, 335);
+            this.s8.Location = new System.Drawing.Point(633, 336);
             this.s8.Name = "s8";
             this.s8.Size = new System.Drawing.Size(51, 13);
             this.s8.TabIndex = 17;
@@ -226,7 +226,7 @@ namespace RecepcjaWHotelu
             // s9
             // 
             this.s9.AutoSize = true;
-            this.s9.Location = new System.Drawing.Point(742, 365);
+            this.s9.Location = new System.Drawing.Point(633, 366);
             this.s9.Name = "s9";
             this.s9.Size = new System.Drawing.Size(51, 13);
             this.s9.TabIndex = 18;
@@ -235,7 +235,7 @@ namespace RecepcjaWHotelu
             // t1
             // 
             this.t1.AutoSize = true;
-            this.t1.Location = new System.Drawing.Point(932, 114);
+            this.t1.Location = new System.Drawing.Point(823, 115);
             this.t1.Name = "t1";
             this.t1.Size = new System.Drawing.Size(10, 13);
             this.t1.TabIndex = 19;
@@ -244,7 +244,7 @@ namespace RecepcjaWHotelu
             // t2
             // 
             this.t2.AutoSize = true;
-            this.t2.Location = new System.Drawing.Point(932, 146);
+            this.t2.Location = new System.Drawing.Point(823, 147);
             this.t2.Name = "t2";
             this.t2.Size = new System.Drawing.Size(10, 13);
             this.t2.TabIndex = 20;
@@ -253,7 +253,7 @@ namespace RecepcjaWHotelu
             // t3
             // 
             this.t3.AutoSize = true;
-            this.t3.Location = new System.Drawing.Point(932, 176);
+            this.t3.Location = new System.Drawing.Point(823, 177);
             this.t3.Name = "t3";
             this.t3.Size = new System.Drawing.Size(10, 13);
             this.t3.TabIndex = 21;
@@ -262,7 +262,7 @@ namespace RecepcjaWHotelu
             // t4
             // 
             this.t4.AutoSize = true;
-            this.t4.Location = new System.Drawing.Point(932, 208);
+            this.t4.Location = new System.Drawing.Point(823, 209);
             this.t4.Name = "t4";
             this.t4.Size = new System.Drawing.Size(10, 13);
             this.t4.TabIndex = 22;
@@ -271,7 +271,7 @@ namespace RecepcjaWHotelu
             // t5
             // 
             this.t5.AutoSize = true;
-            this.t5.Location = new System.Drawing.Point(932, 237);
+            this.t5.Location = new System.Drawing.Point(823, 238);
             this.t5.Name = "t5";
             this.t5.Size = new System.Drawing.Size(10, 13);
             this.t5.TabIndex = 23;
@@ -280,7 +280,7 @@ namespace RecepcjaWHotelu
             // t6
             // 
             this.t6.AutoSize = true;
-            this.t6.Location = new System.Drawing.Point(932, 269);
+            this.t6.Location = new System.Drawing.Point(823, 270);
             this.t6.Name = "t6";
             this.t6.Size = new System.Drawing.Size(10, 13);
             this.t6.TabIndex = 24;
@@ -289,7 +289,7 @@ namespace RecepcjaWHotelu
             // t7
             // 
             this.t7.AutoSize = true;
-            this.t7.Location = new System.Drawing.Point(932, 301);
+            this.t7.Location = new System.Drawing.Point(823, 302);
             this.t7.Name = "t7";
             this.t7.Size = new System.Drawing.Size(10, 13);
             this.t7.TabIndex = 25;
@@ -298,7 +298,7 @@ namespace RecepcjaWHotelu
             // t8
             // 
             this.t8.AutoSize = true;
-            this.t8.Location = new System.Drawing.Point(932, 335);
+            this.t8.Location = new System.Drawing.Point(823, 336);
             this.t8.Name = "t8";
             this.t8.Size = new System.Drawing.Size(10, 13);
             this.t8.TabIndex = 26;
@@ -307,7 +307,7 @@ namespace RecepcjaWHotelu
             // t9
             // 
             this.t9.AutoSize = true;
-            this.t9.Location = new System.Drawing.Point(932, 365);
+            this.t9.Location = new System.Drawing.Point(823, 366);
             this.t9.Name = "t9";
             this.t9.Size = new System.Drawing.Size(10, 13);
             this.t9.TabIndex = 27;
@@ -315,7 +315,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_back
             // 
-            this.btn_back.Location = new System.Drawing.Point(783, 413);
+            this.btn_back.Location = new System.Drawing.Point(674, 414);
             this.btn_back.Name = "btn_back";
             this.btn_back.Size = new System.Drawing.Size(160, 52);
             this.btn_back.TabIndex = 28;
@@ -325,7 +325,7 @@ namespace RecepcjaWHotelu
             // 
             // btn_refresh
             // 
-            this.btn_refresh.Location = new System.Drawing.Point(554, 413);
+            this.btn_refresh.Location = new System.Drawing.Point(448, 414);
             this.btn_refresh.Name = "btn_refresh";
             this.btn_refresh.Size = new System.Drawing.Size(165, 52);
             this.btn_refresh.TabIndex = 29;
