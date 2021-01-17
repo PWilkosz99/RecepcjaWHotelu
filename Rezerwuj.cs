@@ -19,7 +19,11 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Klik dodaje do bazy informacje o numerze, datach, ilosci osob oraz opcjach dodatkowych
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             if(!(txt_nrrez.Text == "") && (!(cmb_osob.Text == "")))
@@ -61,13 +65,21 @@ namespace RecepcjaWHotelu
             }
             
         }
-
+        /// <summary>
+        /// Blokada dodawania liter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_nrrez_KeyPress(object sender, KeyPressEventArgs e)
         {
 
                 e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
+        /// <summary>
+        /// Automatyczne ustawianie id na podstawie daty i statystyk
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Rezerwuj_Load(object sender, EventArgs e)
         {
             cmb_osob.SelectedIndex = 0;
@@ -75,7 +87,11 @@ namespace RecepcjaWHotelu
             date_od.Value = DateTime.Now.Date;
             date_do.Value = DateTime.Now.AddDays(1) ;
         }
-
+        /// <summary>
+        /// Cofniecie do poprzedniej karty
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_back_Click(object sender, EventArgs e)
         {
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();

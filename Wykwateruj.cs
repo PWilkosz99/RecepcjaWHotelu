@@ -16,7 +16,13 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Klik dokonuje wykwaterowania uzytkownika z bazy
+        /// oraz w zaleznosci od statusu platnosci
+        /// przenosi do odpowiedniej karty
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             if (!(cmb_numerpokoju.Text == "" && txt_nrrezerwacji.Text == ""))
@@ -52,13 +58,21 @@ namespace RecepcjaWHotelu
                 MessageBox.Show("Uzupełnij dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+        /// <summary>
+        /// Blokada wpisywania znakow
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_nrrezerwacji_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
+        /// <summary>
+        /// Powrot do poprzedniej karty
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_back_Click(object sender, EventArgs e)
         {
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();

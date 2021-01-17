@@ -29,6 +29,7 @@ namespace RecepcjaWHotelu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MW));
             this.panelContainer = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
@@ -45,8 +46,9 @@ namespace RecepcjaWHotelu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.panelContainer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MW";
-            this.Text = "Recepcjonista";
+            this.Text = "Recepcja w hotelu";
             this.Load += new System.EventHandler(this.MW_Load);
             this.ResumeLayout(false);
 

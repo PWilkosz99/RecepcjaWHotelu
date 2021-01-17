@@ -14,6 +14,20 @@ namespace RecepcjaWHotelu
 {
     public partial class Zaplanowane : UserControl
     {
+        /// <summary>
+        /// Dodanie wiersza do gridu
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="dataod"></param>
+        /// <param name="datado"></param>
+        /// <param name="iloscos"></param>
+        /// <param name="parking"></param>
+        /// <param name="jedzenie"></param>
+        /// <param name="spa"></param>
+        /// <param name="silownia"></param>
+        /// <param name="imie"></param>
+        /// <param name="nazwisko"></param>
+        /// <param name="nrtel"></param>
         public void Populate(string id, string dataod, string datado, string iloscos, string parking, string jedzenie, string spa, string silownia, string imie, string nazwisko, string nrtel)
         {
             bool prk = false;
@@ -44,7 +58,9 @@ namespace RecepcjaWHotelu
             dg.Rows.Add(id, imie, nazwisko, nrtel, dataod, datado, iloscos, prk, fd, sp, sil);
         }
 
-
+        /// <summary>
+        /// Pobranie informacji z bazy danych i modyfikacja gridu
+        /// </summary>
         public void Apped()
         {
             MySqlConnection cnn;
@@ -75,7 +91,10 @@ namespace RecepcjaWHotelu
                 cnn.Close();
             }
         }
-
+        /// <summary>
+        /// Usuwanie wiersza z gridu
+        /// </summary>
+        /// <param name="id"></param>
         public void Delete(long id)
         {
             MySqlConnection cnn;
@@ -102,7 +121,20 @@ namespace RecepcjaWHotelu
                 cnn.Close();
             }
         }
-
+        /// <summary>
+        /// Aktualizacja wiersza w gridzie
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="dataod"></param>
+        /// <param name="datado"></param>
+        /// <param name="iloscos"></param>
+        /// <param name="parking"></param>
+        /// <param name="jedzenie"></param>
+        /// <param name="spa"></param>
+        /// <param name="silownia"></param>
+        /// <param name="imie"></param>
+        /// <param name="nazwisko"></param>
+        /// <param name="nrtel"></param>
         public void Update(string id, string dataod, string datado, string iloscos, string parking, string jedzenie, string spa, string silownia, string imie, string nazwisko, string nrtel)
         {
             MySqlConnection cnn;
@@ -152,7 +184,9 @@ namespace RecepcjaWHotelu
                 cnn.Close();
             }
         }
-
+        /// <summary>
+        /// Dososowanie kolumnt w gridzie
+        /// </summary>
         public Zaplanowane()
         {
             InitializeComponent();
@@ -190,18 +224,30 @@ namespace RecepcjaWHotelu
             dg.Columns[0].ReadOnly = true;
             Apped();
         }
-
+        /// <summary>
+        /// Cofanie do poprzedniej karty
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_back_Click(object sender, EventArgs e)
         {
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
         }
-
+        /// <summary>
+        /// Odswiezanie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_refresh_Click(object sender, EventArgs e)
         {
             dg.Rows.Clear();
             Apped();
         }
-
+        /// <summary>
+        /// Klik uruchamia usuwanie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_delete_Click(object sender, EventArgs e)
         {
             long selected = Int64.Parse(dg.SelectedRows[0].Cells[0].Value.ToString());
@@ -209,7 +255,11 @@ namespace RecepcjaWHotelu
             dg.Rows.Clear();
             Apped();
         }
-
+        /// <summary>
+        /// Uruchamianie aktualizacji
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_update_Click(object sender, EventArgs e)
         {
             string selected = dg.SelectedRows[0].Cells[0].Value.ToString();

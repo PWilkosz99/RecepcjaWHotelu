@@ -16,7 +16,11 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Klikniecie przenosi do rezerwacji
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_rezerwuj_Click(object sender, EventArgs e)
         {
             if (!MW.Instance.PnlContainter.Controls.ContainsKey("Rezerwuj"))
@@ -27,7 +31,11 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Rezerwuj"].BringToFront();
         }
-
+        /// <summary>
+        /// Klikniecie przenos do zakwaterowania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_zakwateruj_Click(object sender, EventArgs e)
         {
             if (!MW.Instance.PnlContainter.Controls.ContainsKey("Zakwateruj"))
@@ -38,7 +46,11 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Zakwateruj"].BringToFront();
         }
-
+        /// <summary>
+        /// Klikniecie przenosi do wykwaterowia
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_wykwateruj_Click(object sender, EventArgs e)
         {
             if (!MW.Instance.PnlContainter.Controls.ContainsKey("Wykwateruj"))
@@ -49,7 +61,11 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Wykwateruj"].BringToFront();
         }
-
+        /// <summary>
+        /// Klikniecie przenosi do wyswietlania zakwaterowan
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_wyswietl_Click(object sender, EventArgs e)
         {
             if (!MW.Instance.PnlContainter.Controls.ContainsKey("Wyswietl"))
@@ -60,7 +76,11 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Wyswietl"].BringToFront();
         }
-
+        /// <summary>
+        /// Klikniecie przenosi do planowania wyklczen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_wyklucz_Click(object sender, EventArgs e)
         {
             if (!MW.Instance.PnlContainter.Controls.ContainsKey("Wyklucz"))
@@ -71,7 +91,11 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Wyklucz"].BringToFront();
         }
-
+        /// <summary>
+        /// Klikniecie przenosi do wyswietlania wyklczen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_zaplanowane_Click(object sender, EventArgs e)
         {
             if (!MW.Instance.PnlContainter.Controls.ContainsKey("Zaplanowane"))
@@ -82,7 +106,11 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Zaplanowane"].BringToFront();
         }
-
+        /// <summary>
+        /// Klikniecie wylogowuje uzytkownika i przenosi do strony logowania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_logout_Click(object sender, EventArgs e)
         {
             MW.Instance.PnlContainter.Controls["Login"].BringToFront();

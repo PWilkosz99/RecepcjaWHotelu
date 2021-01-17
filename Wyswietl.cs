@@ -19,7 +19,9 @@ namespace RecepcjaWHotelu
             InitializeComponent();
             Wyswietlanie();
         }
-
+        /// <summary>
+        /// Metoda wyswietla aktualne zakwaterowania
+        /// </summary>
         public void Wyswietlanie()
         {
             MySqlConnection cnn;
@@ -373,12 +375,20 @@ namespace RecepcjaWHotelu
             {
             }
         }
-
+        /// <summary>
+        /// Cofanie do poprzedniej karty
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_back_Click(object sender, EventArgs e)
         {
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
         }
-
+        /// <summary>
+        /// Odswiezanie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_refresh_Click(object sender, EventArgs e)
         {
             Wyswietlanie();

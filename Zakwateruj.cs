@@ -16,7 +16,14 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Klik pobiera informacje z formularza 
+        /// i w zaleznosci od nich
+        /// przenosi do odpowiedniej karty
+        /// i dokonuje zakwaterowania
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_potwierdz_Click(object sender, EventArgs e)
         {
 
@@ -64,13 +71,21 @@ namespace RecepcjaWHotelu
             }
             
         }
-
+        /// <summary>
+        /// Blokada wpisywania lieteralow
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txt_nrrez_KeyPress(object sender, KeyPressEventArgs e)
         {
 
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-
+        /// <summary>
+        /// Powrot do poprzedniej karty
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_back_Click(object sender, EventArgs e)
         {
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();

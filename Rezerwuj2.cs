@@ -16,7 +16,11 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Klik dodaje do bazy o imieniu, nazwisku, nrtelefunu klienta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_potwierdz_Click(object sender, EventArgs e)
         {
             if(!(txt_imie.Text == "") && !(txt_nazwisko.Text == "") && !(txt_numer.Text == "")){
@@ -35,7 +39,11 @@ namespace RecepcjaWHotelu
                 MessageBox.Show("Uzupełnij pozostałe dane", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
+        /// <summary>
+        /// Klik powraca do poprzedniej karty
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_back_Click(object sender, EventArgs e)
         {
             var rezerwacja2 = new Rezerwacja();

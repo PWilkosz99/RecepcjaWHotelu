@@ -9,11 +9,17 @@ using System.Windows.Forms;
 
 namespace RecepcjaWHotelu
 {
+    /// <summary>
+    /// Klasa obslugujaca wykwaterowanie
+    /// </summary>
     public class Wykwaterowanie
     {
         public long nr_rezerwacji;
         public int nr_pokoju;
-        
+        /// <summary>
+        /// Metoda dokoknuje wykwaterowania uzytkownika z bazy
+        /// </summary>
+        /// <returns></returns>
         public byte Wykwateruj()
         {
 

@@ -13,6 +13,10 @@ namespace RecepcjaWHotelu
     {
         public long nr_rezerwacji;
         public int nr_pokoju;
+        /// <summary>
+        /// Metoda dokonuje zakwaterowania klienta
+        /// </summary>
+        /// <returns></returns>
         public bool Zakwateruj()
         {
             MySqlConnection cnn;

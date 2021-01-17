@@ -19,7 +19,12 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Po nacisnięciu przyciusku metoda sprawdza czy dane są poprawne,
+        /// jeśli tak przechodzi do menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_check_Click(object sender, EventArgs e)
         {
 

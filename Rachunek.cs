@@ -9,12 +9,19 @@ using System.Windows.Forms;
 
 namespace RecepcjaWHotelu
 {
+    /// <summary>
+    /// Klasa obslugujaca rachunek
+    /// </summary>
     class Rachunek
     {
         public string rezid;
         public int wielkosc;
         public bool czyuregulowano;
         public char metoda;
+        /// <summary>
+        /// Metoda dodaje informacje o statusie rachunku do bazy
+        /// </summary>
+        /// <returns></returns>
         public bool Ureguluj()
         {
             MySqlConnection cnn;

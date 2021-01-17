@@ -18,7 +18,11 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Klik dodaje do bazy nowe wykluczenie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             MySqlConnection cnn;
@@ -44,7 +48,11 @@ namespace RecepcjaWHotelu
             }
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();
         }
-
+        /// <summary>
+        /// Klik usuwa wykluczenie z bazy
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_delete_Click(object sender, EventArgs e)
         {
 
@@ -76,7 +84,11 @@ namespace RecepcjaWHotelu
         {
 
         }
-
+        /// <summary>
+        /// Klik powraca do menu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_back_Click(object sender, EventArgs e)
         {
             MW.Instance.PnlContainter.Controls["Menu"].BringToFront();

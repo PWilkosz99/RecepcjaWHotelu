@@ -16,7 +16,11 @@ namespace RecepcjaWHotelu
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Klik pobiera informacje z formularza i uruchamia metode Ureguluj
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_confirm_Click(object sender, EventArgs e)
         {
             if (txt_kwota.Text != "" && (rd_gotowka.Checked == true || rd_karta.Checked == true))

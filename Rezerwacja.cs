@@ -9,6 +9,9 @@ using System.Windows.Forms;
 
 namespace RecepcjaWHotelu
 {
+    /// <summary>
+    /// Klasa zajumjaca sie obsluga rezerwacji
+    /// </summary>
     public class Rezerwacja
     {
         public long nrezerwacji;
@@ -23,7 +26,10 @@ namespace RecepcjaWHotelu
         public string imie;
         public string nazwisko;
         public long nrtelefonu;
-
+        /// <summary>
+        /// Metoda dodajaca do bazy informacje o id, datach, ilosci osob oraz bazach dodatkowych
+        /// </summary>
+        /// <returns></returns>
         public bool Rezerwuj()
         {
 
@@ -71,6 +77,9 @@ namespace RecepcjaWHotelu
             }
             return false;
         }
+        /// <summary>
+        /// Metoda dodaje dob bazy informacje o imieniu, nazwisku, numerze telefonu
+        /// </summary>
         public void Rezerwuj2()
         {
             MySqlConnection cnn;
@@ -101,6 +110,9 @@ namespace RecepcjaWHotelu
             }
         }
 
+        /// <summary>
+        /// Metoda usuwajaca rezerwacje z bazy
+        /// </summary>
         public void Odrezerwuj()
         {
 
