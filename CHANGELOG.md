@@ -45,3 +45,8 @@
 - naprawa bledow wykrytych w fazie testowania jednostkowego
 0.9
 - finalna modyfikacja oraz refaktoryzacja kodu
+0.91
+- modyfikacja ściężki bezwzględnej hasła
+- modyfikacja dokumentacji
+0.92
+- dodanie plików bazodanowych
